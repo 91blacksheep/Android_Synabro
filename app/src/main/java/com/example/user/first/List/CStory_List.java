@@ -90,7 +90,7 @@ public class CStory_List extends BaseAdapter
     }
 
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
-    public void addItem(Drawable icon, String title, String desc, String url, String type)
+    public void addItem(Drawable icon, String title, String desc, String url, String group, String type)
     {
         CStory_Data item = new CStory_Data();
 
@@ -98,6 +98,7 @@ public class CStory_List extends BaseAdapter
         item.Set_m_title(title);
         item.Set_m_ex(desc);
         item.Set_m_url(url);
+        item.Set_m_group(group);
         item.Set_m_type(type);
         /* TODO */
 

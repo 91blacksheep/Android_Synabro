@@ -25,6 +25,7 @@
         <activity android:name=".Emotion.CDisGust"></activity>
         <activity android:name=".Emotion.CPanic"></activity>
         <activity android:name=".Story.CStory_Layout"/>
+        <activity android:name=".Story.CStory_Player"/>
     </application>
 
 </manifest>

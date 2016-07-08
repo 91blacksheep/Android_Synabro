@@ -11,6 +11,7 @@ public class CStory_Data
     private String m_title;
     private String m_ex;
     private String m_url;
+    private String m_group;
     private String m_type;
 
     public CStory_Data()
@@ -18,12 +19,13 @@ public class CStory_Data
 
     }
 
-    public CStory_Data(Drawable thumbnail, String title, String ex, String url, String type)
+    public CStory_Data(Drawable thumbnail, String title, String ex, String url, String group, String type)
     {
         this.m_thumbnail = thumbnail;
         this.m_title = title;
         this.m_ex = ex;
         this.m_url = url;
+        this.m_group = group;
         this.m_type = type;
     }
 
@@ -61,6 +63,15 @@ public class CStory_Data
     public void Set_m_url(String m_url)
     {
         this.m_url = m_url;
+    }
+
+    public String Get_m_group()
+    {
+        return this.m_group;
+    }
+    public void Set_m_group(String m_group)
+    {
+        this.m_group = m_group;
     }
 
     public String Get_m_type()

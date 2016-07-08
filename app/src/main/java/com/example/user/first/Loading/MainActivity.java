@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TView = (TextView)findViewById(R.id.loading);
-
         TView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
