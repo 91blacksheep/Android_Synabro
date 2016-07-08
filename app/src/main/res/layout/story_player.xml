@@ -3,16 +3,31 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <HorizontalScrollView
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/horizontalScrollView" >
+        android:layout_weight="1">
 
-        <TextView
+    </android.support.v4.view.ViewPager>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="대화지도"
-            android:id="@+id/textView18" />
-    </HorizontalScrollView>
+            android:text="이전"
+            android:id="@+id/btn_pre"
+            android:layout_gravity="left|bottom" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다음"
+            android:id="@+id/btn_next"
+            android:layout_gravity="right|bottom" />
+    </FrameLayout>
+
 </LinearLayout>
