@@ -1,4 +1,4 @@
-package com.example.user.first.Story;
+package com.example.user.first.Story.Story;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -69,7 +69,7 @@ public class CStory_Player extends AppCompatActivity
         switch( v.getId() ){
             case R.id.btn_pre://이전버튼 클릭
 
-                position=pager.getCurrentItem();//현재 보여지는 아이템의 위치를 리턴
+                position = pager.getCurrentItem();//현재 보여지는 아이템의 위치를 리턴
 
                 //현재 위치(position)에서 -1 을 해서 이전 position으로 변경
                 //이전 Item으로 현재의 아이템 변경 설정(가장 처음이면 더이상 이동하지 않음)
@@ -81,7 +81,7 @@ public class CStory_Player extends AppCompatActivity
 
             case R.id.btn_next://다음버튼 클릭
 
-                position=pager.getCurrentItem();//현재 보여지는 아이템의 위치를 리턴
+                position = pager.getCurrentItem();//현재 보여지는 아이템의 위치를 리턴
 
                 //현재 위치(position)에서 +1 을 해서 다음 position으로 변경
                 //다음 Item으로 현재의 아이템 변경 설정(가장 마지막이면 더이상 이동하지 않음)

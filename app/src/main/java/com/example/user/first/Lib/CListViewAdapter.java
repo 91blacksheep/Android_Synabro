@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.user.first.List.CStory_Data;
+import com.example.user.first.Story.StoryList.Lib.CStoryData;
 import com.example.user.first.R;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class CListViewAdapter extends BaseAdapter
 {
     //  Adapter에 추가된 데이터를 저장하기 위한 ArrayList
-    private ArrayList<CStory_Data> listViewItemList = new ArrayList<CStory_Data>();
+    private ArrayList<CStoryData> listViewItemList = new ArrayList<CStoryData>();
 
     //  ListViewAdapter의 생성자
     public CListViewAdapter()
@@ -60,7 +60,7 @@ public class CListViewAdapter extends BaseAdapter
 
 
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
-        CStory_Data listViewItem = listViewItemList.get(position);
+        CStoryData listViewItem = listViewItemList.get(position);
 
         // 아이템 내 각 위젯에 데이터 반영
         iconImageView.setImageDrawable(listViewItem.Get_m_thumbnail());
@@ -87,7 +87,7 @@ public class CListViewAdapter extends BaseAdapter
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
     public void addItem(Drawable icon, String title, String desc)
     {
-        CStory_Data item = new CStory_Data();
+        CStoryData item = new CStoryData();
 
         item.Set_m_thumbnail(icon);
         item.Set_m_title(title);

@@ -3,7 +3,6 @@ package com.example.user.first.Home;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -12,8 +11,7 @@ import android.widget.TextView;
 import com.example.user.first.Emotion.CEmotion;
 import com.example.user.first.Setting.CSetting;
 import com.example.user.first.R;
-import com.example.user.first.Story.CStory;
-import com.example.user.first.Story.CStory_Layout;
+import com.example.user.first.Story.StoryList.Client.CStoryListClient;
 
 /**
  * Created by USER on 2016-06-26.
@@ -49,7 +47,7 @@ public class CHome extends AppCompatActivity {
         btnStory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CStory_Layout.class);
+                Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
                 startActivity(intent);
             }
         });

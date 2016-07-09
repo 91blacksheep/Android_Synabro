@@ -1,11 +1,11 @@
-package com.example.user.first.List;
+package com.example.user.first.Story.StoryList.Lib;
 
 import android.graphics.drawable.Drawable;
 
 /**
  * Created by KICT-15 on 2016-07-05.
  */
-public class CStory_Data
+public class CStoryData
 {
     private Drawable m_thumbnail;
     private String m_title;
@@ -14,12 +14,12 @@ public class CStory_Data
     private String m_group;
     private String m_type;
 
-    public CStory_Data()
+    public CStoryData()
     {
 
     }
 
-    public CStory_Data(Drawable thumbnail, String title, String ex, String url, String group, String type)
+    public CStoryData(Drawable thumbnail, String title, String ex, String url, String group, String type)
     {
         this.m_thumbnail = thumbnail;
         this.m_title = title;

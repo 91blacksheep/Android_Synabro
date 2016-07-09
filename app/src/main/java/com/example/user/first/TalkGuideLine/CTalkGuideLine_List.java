@@ -53,8 +53,9 @@ public class CTalkGuideLine_List extends PagerAdapter
 
         //ImageView에 현재 position 번째에 해당하는 이미지를 보여주기 위한 작업
         //현재 position에 해당하는 이미지를 setting
-        CTalkGuideLine_Data listViewPagerItem = talkGuideLineList.get(position);
-        tv_viewPager.setText(listViewPagerItem.Get_m_talk_guideLine());
+        /*CTalkGuideLine_Data listViewPagerItem = talkGuideLineList.get(position);
+        tv_viewPager.setText(listViewPagerItem.Get_m_talk_guideLine());*/
+        tv_viewPager.setText("1. hello world");
 
         //ViewPager에 만들어 낸 View 추가
         container.addView(view);
@@ -88,7 +89,7 @@ public class CTalkGuideLine_List extends PagerAdapter
     {
         CTalkGuideLine_Data item = new CTalkGuideLine_Data();
 
-        item.Set_m_talk_guideLine(text);
+        item.Set_m_talkGuideLine(text);
         /* TODO */
 
         talkGuideLineList.add(item);

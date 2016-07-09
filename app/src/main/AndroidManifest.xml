@@ -24,8 +24,8 @@
         <activity android:name=".Emotion.CAnger"></activity>
         <activity android:name=".Emotion.CDisGust"></activity>
         <activity android:name=".Emotion.CPanic"></activity>
-        <activity android:name=".Story.CStory_Layout"/>
-        <activity android:name=".Story.CStory_Player"/>
+        <activity android:name=".Story.StoryList.Client.CStoryListClient"/>
+        <activity android:name=".Story.Story.CStory_Player"/>
     </application>
 
 </manifest>
