@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ScrollView;
 
-import com.example.user.first.Story.Story.CStory_Player;
+import com.example.user.first.Story.Story.TalkGuideLine.Client.CStory_Player;
 import com.example.user.first.Story.StoryList.Lib.CStoryData;
 import com.example.user.first.Story.StoryList.Interface.CStoryList;
 import com.example.user.first.R;

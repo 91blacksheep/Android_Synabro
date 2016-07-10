@@ -1,4 +1,4 @@
-package com.example.user.first.TalkGuideLine;
+package com.example.user.first.Story.Story.TalkGuideLine.Interface;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.user.first.R;
+import com.example.user.first.Story.Story.TalkGuideLine.Lib.CTalkGuideLine_Data;
 
 import java.util.ArrayList;
 
@@ -23,6 +24,13 @@ public class CTalkGuideLine_List extends PagerAdapter
 
         //전달 받은 LayoutInflater를 멤버변수로 전달
         this.inflater = inflater;
+
+        addItem("1. 아이와 함께 그동안 솜사탕이 된 기억들을 나눠보세요.");
+        addItem("2. 그 솜사탕을 먹고 생겨난 기억 사탕들도 함께 나눠보세요.");
+        addItem("3. 솜사탕의 변화와 사탕이 섞이면서 색다른 솜사탕이 되고 색다른 기억 사탕이 되는 것을 아이에게 느낄 수 있도록 해주세요.");
+        addItem("4. 아이의 솜사탕도 소중하고 기억 사탕도 소중하지만, 다른 사람들의 솜사탕과\n" +
+                "기억 사탕들도 소중하고 섞이면서 다른 솜사탕이 될 수 있다는 것을 알려주세요. 아마 분명 즐거운 시간이 될 것이예요.");
+        addItem("5. 오늘의 기억들도 솜사탕과 기억 사탕이 되어 아이와 부모님에게 남을 것이랍니다.");
     }
 
     //PagerAdapter가 가지고 잇는 View의 개수를 리턴
@@ -53,9 +61,9 @@ public class CTalkGuideLine_List extends PagerAdapter
 
         //ImageView에 현재 position 번째에 해당하는 이미지를 보여주기 위한 작업
         //현재 position에 해당하는 이미지를 setting
-        /*CTalkGuideLine_Data listViewPagerItem = talkGuideLineList.get(position);
-        tv_viewPager.setText(listViewPagerItem.Get_m_talk_guideLine());*/
-        tv_viewPager.setText("1. hello world");
+        CTalkGuideLine_Data listViewPagerItem = talkGuideLineList.get(position);
+        tv_viewPager.setText(listViewPagerItem.Get_m_talkGuideLine());
+        //tv_viewPager.setText("1. hello world");
 
         //ViewPager에 만들어 낸 View 추가
         container.addView(view);

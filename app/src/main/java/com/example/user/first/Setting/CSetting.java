@@ -9,7 +9,6 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.user.first.R;
-import com.example.user.first.Story.CStory;
 
 /**
  * Created by USER on 2016-06-26.

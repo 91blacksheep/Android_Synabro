@@ -15,7 +15,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Story.CStory"></activity>
         <activity android:name=".Home.CHome"></activity>
         <activity android:name=".Emotion.CEmotion"></activity>
         <activity android:name=".Setting.CSetting"></activity>
@@ -25,7 +24,7 @@
         <activity android:name=".Emotion.CDisGust"></activity>
         <activity android:name=".Emotion.CPanic"></activity>
         <activity android:name=".Story.StoryList.Client.CStoryListClient"/>
-        <activity android:name=".Story.Story.CStory_Player"/>
+        <activity android:name=".Story.Story.TalkGuideLine.Client.CStory_Player"/>
     </application>
 
 </manifest>

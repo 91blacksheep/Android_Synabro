@@ -1,4 +1,4 @@
-package com.example.user.first.Story.Story;
+package com.example.user.first.Story.Story.TalkGuideLine.Client;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,9 +10,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.example.user.first.Lib.CViewPager_Adapter;
 import com.example.user.first.R;
-import com.example.user.first.TalkGuideLine.CTalkGuideLine_List;
+import com.example.user.first.Story.Story.TalkGuideLine.Interface.CTalkGuideLine_List;
 
 /**
  * Created by KICT-15 on 2016-07-08.
@@ -53,16 +52,11 @@ public class CStory_Player extends AppCompatActivity
         //ViewPager에 Adapter 설정
         pager.setAdapter(adapter);
 
-        adapter.addItem("1. 아이와 함께 그동안 솜사탕이 된 기억들을 나눠보세요.");
-        adapter.addItem("2. 그 솜사탕을 먹고 생겨난 기억 사탕들도 함께 나눠보세요.");
-        adapter.addItem("3. 솜사탕의 변화와 사탕이 섞이면서 색다른 솜사탕이 되고 색다른 기억 사탕이 되는 것을 아이에게 느낄 수 있도록 해주세요.");
-        adapter.addItem("4. 아이의 솜사탕도 소중하고 기억 사탕도 소중하지만, 다른 사람들의 솜사탕과\n" +
-                "기억 사탕들도 소중하고 섞임ㄴ서 다른 솜사탕이 될 수 있다는 것을 알려주세요. 아마 분명 즐거운 시간이 될 것이예요.");
-        adapter.addItem("5. 오늘의 기억들도 솜사탕과 기억 사탕이 되어 아이와 부모님에게 남을 것이랍니다.");
+
     }
 
     //onClick속성이 지정된 View를 클릭했을때 자동으로 호출되는 메소드
-    public void mOnClick(View v){
+    public void OnClick(View v){
 
         int position;
 
