@@ -1,4 +1,4 @@
-package com.example.user.first.Story.Story.TalkGuideLine.Client;
+package com.example.user.first.Story.Story.PlayerView;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -9,10 +9,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 
 import com.example.user.first.R;
-import com.example.user.first.Story.Story.TalkGuideLine.Interface.CTalkGuideLine_List;
+import com.example.user.first.Loading.Parsing.Interface.CTalkGuideLine_List;
 
 /**
  * Created by KICT-15 on 2016-07-08.

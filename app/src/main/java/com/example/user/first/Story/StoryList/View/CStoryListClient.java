@@ -1,4 +1,4 @@
-package com.example.user.first.Story.StoryList.Client;
+package com.example.user.first.Story.StoryList.View;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -13,9 +13,9 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ScrollView;
 
-import com.example.user.first.Story.Story.TalkGuideLine.Client.CStory_Player;
-import com.example.user.first.Story.StoryList.Lib.CStoryData;
-import com.example.user.first.Story.StoryList.Interface.CStoryList;
+import com.example.user.first.Story.Story.PlayerView.CStory_Player;
+import com.example.user.first.Loading.Parsing.Lib.CStoryData;
+import com.example.user.first.Loading.Parsing.Interface.CStoryList;
 import com.example.user.first.R;
 
 /**

@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.user.first.R;
-import com.example.user.first.Story.Story.TalkGuideLine.Client.CStory_Player;
+import com.example.user.first.Story.Story.PlayerView.CStory_Player;
 
 /**
  * Created by USER on 2016-06-26.

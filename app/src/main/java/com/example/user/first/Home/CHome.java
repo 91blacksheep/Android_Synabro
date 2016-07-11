@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.example.user.first.Emotion.CEmotion;
 import com.example.user.first.Setting.CSetting;
 import com.example.user.first.R;
-import com.example.user.first.Story.StoryList.Client.CStoryListClient;
+import com.example.user.first.Story.StoryList.View.CStoryListClient;
 
 /**
  * Created by USER on 2016-06-26.

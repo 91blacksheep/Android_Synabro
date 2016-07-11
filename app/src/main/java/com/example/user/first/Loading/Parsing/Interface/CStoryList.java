@@ -1,4 +1,4 @@
-package com.example.user.first.Story.StoryList.Interface;
+package com.example.user.first.Loading.Parsing.Interface;
 
 
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.user.first.Story.StoryList.Lib.CStoryData;
+import com.example.user.first.Loading.Parsing.Lib.CStoryData;
 import com.example.user.first.R;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.user.first.Story.Story.TalkGuideLine.Interface;
+package com.example.user.first.Loading.Parsing.Interface;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.user.first.R;
-import com.example.user.first.Story.Story.TalkGuideLine.Lib.CTalkGuideLine_Data;
+import com.example.user.first.Loading.Parsing.Lib.CTalkGuideLine_Data;
 
 import java.util.ArrayList;
 
