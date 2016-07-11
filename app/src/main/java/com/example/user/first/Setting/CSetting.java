@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.user.first.R;
+import com.example.user.first.Story.Story.TalkGuideLine.Client.CStory_Player;
 
 /**
  * Created by USER on 2016-06-26.
@@ -43,7 +44,7 @@ public class CSetting extends AppCompatActivity {
         btnWording.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CStory.class);
+                Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
                 startActivity(intent);
             }
         });
@@ -51,7 +52,7 @@ public class CSetting extends AppCompatActivity {
         btnQnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CStory.class);
+                Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
                 startActivity(intent);
             }
         });
@@ -59,7 +60,7 @@ public class CSetting extends AppCompatActivity {
         btnTutorial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CStory.class);
+                Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
                 startActivity(intent);
             }
         });

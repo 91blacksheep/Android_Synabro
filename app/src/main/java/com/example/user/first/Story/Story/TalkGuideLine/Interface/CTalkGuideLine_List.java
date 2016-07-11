@@ -29,7 +29,7 @@ public class CTalkGuideLine_List extends PagerAdapter
         addItem("2. 그 솜사탕을 먹고 생겨난 기억 사탕들도 함께 나눠보세요.");
         addItem("3. 솜사탕의 변화와 사탕이 섞이면서 색다른 솜사탕이 되고 색다른 기억 사탕이 되는 것을 아이에게 느낄 수 있도록 해주세요.");
         addItem("4. 아이의 솜사탕도 소중하고 기억 사탕도 소중하지만, 다른 사람들의 솜사탕과\n" +
-                "기억 사탕들도 소중하고 섞이면서 다른 솜사탕이 될 수 있다는 것을 알려주세요. 아마 분명 즐거운 시간이 될 것이예요.");
+                "기억 사탕들도 소중하고 섞임ㄴ서 다른 솜사탕이 될 수 있다는 것을 알려주세요. 아마 분명 즐거운 시간이 될 것이예요.");
         addItem("5. 오늘의 기억들도 솜사탕과 기억 사탕이 되어 아이와 부모님에게 남을 것이랍니다.");
     }
 
@@ -63,7 +63,6 @@ public class CTalkGuideLine_List extends PagerAdapter
         //현재 position에 해당하는 이미지를 setting
         CTalkGuideLine_Data listViewPagerItem = talkGuideLineList.get(position);
         tv_viewPager.setText(listViewPagerItem.Get_m_talkGuideLine());
-        //tv_viewPager.setText("1. hello world");
 
         //ViewPager에 만들어 낸 View 추가
         container.addView(view);

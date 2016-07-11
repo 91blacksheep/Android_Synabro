@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import com.example.user.first.R;
 import com.example.user.first.Story.Story.TalkGuideLine.Interface.CTalkGuideLine_List;
@@ -16,9 +17,9 @@ import com.example.user.first.Story.Story.TalkGuideLine.Interface.CTalkGuideLine
 /**
  * Created by KICT-15 on 2016-07-08.
  */
-public class CStory_Player extends AppCompatActivity
-{
+public class CStory_Player extends AppCompatActivity {
     ViewPager pager;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,7 @@ public class CStory_Player extends AppCompatActivity
         intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
 
-        pager = (ViewPager)findViewById(R.id.pager);
+        pager = (ViewPager) findViewById(R.id.pager);
 
         //ViewPager에 설정할 Adapter 객체 생성
         //ListView에서 사용하는 Adapter와 같은 역할.
@@ -52,38 +53,37 @@ public class CStory_Player extends AppCompatActivity
         //ViewPager에 Adapter 설정
         pager.setAdapter(adapter);
 
+        Button btnPre = (Button) findViewById(R.id.btn_pre);
+        if (btnPre != null) {
+            btnPre.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position;
+                    position = pager.getCurrentItem();//현재 보여지는 아이템의 위치를 리턴
 
-    }
+                    //현재 위치(position)에서 -1 을 해서 이전 position으로 변경
+                    //이전 Item으로 현재의 아이템 변경 설정(가장 처음이면 더이상 이동하지 않음)
+                    //첫번째 파라미터: 설정할 현재 위치
+                    //두번째 파라미터: 변경할 때 부드럽게 이동하는가? false면 팍팍 바뀜
+                    pager.setCurrentItem(position - 1, true);
+                }
+            });
+        }
+        Button btnNext = (Button) findViewById(R.id.btn_next);
+        if (btnNext != null) {
+            btnNext.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position;
+                    position = pager.getCurrentItem();//현재 보여지는 아이템의 위치를 리턴
 
-    //onClick속성이 지정된 View를 클릭했을때 자동으로 호출되는 메소드
-    public void OnClick(View v){
-
-        int position;
-
-        switch( v.getId() ){
-            case R.id.btn_pre://이전버튼 클릭
-
-                position = pager.getCurrentItem();//현재 보여지는 아이템의 위치를 리턴
-
-                //현재 위치(position)에서 -1 을 해서 이전 position으로 변경
-                //이전 Item으로 현재의 아이템 변경 설정(가장 처음이면 더이상 이동하지 않음)
-                //첫번째 파라미터: 설정할 현재 위치
-                //두번째 파라미터: 변경할 때 부드럽게 이동하는가? false면 팍팍 바뀜
-                pager.setCurrentItem(position - 1, true);
-
-                break;
-
-            case R.id.btn_next://다음버튼 클릭
-
-                position = pager.getCurrentItem();//현재 보여지는 아이템의 위치를 리턴
-
-                //현재 위치(position)에서 +1 을 해서 다음 position으로 변경
-                //다음 Item으로 현재의 아이템 변경 설정(가장 마지막이면 더이상 이동하지 않음)
-                //첫번째 파라미터: 설정할 현재 위치
-                //두번째 파라미터: 변경할 때 부드럽게 이동하는가? false면 팍팍 바뀜
-                pager.setCurrentItem(position + 1, true);
-
-                break;
+                    //현재 위치(position)에서 -1 을 해서 이전 position으로 변경
+                    //이전 Item으로 현재의 아이템 변경 설정(가장 처음이면 더이상 이동하지 않음)
+                    //첫번째 파라미터: 설정할 현재 위치
+                    //두번째 파라미터: 변경할 때 부드럽게 이동하는가? false면 팍팍 바뀜
+                    pager.setCurrentItem(position + 1, true);
+                }
+            });
         }
     }
 }
