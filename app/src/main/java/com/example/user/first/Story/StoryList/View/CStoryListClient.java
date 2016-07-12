@@ -17,6 +17,7 @@ import com.example.user.first.Story.Story.PlayerView.CStory_Player;
 import com.example.user.first.Loading.Parsing.Lib.CStoryData;
 import com.example.user.first.Loading.Parsing.Interface.CStoryList;
 import com.example.user.first.R;
+import com.example.user.first.Story.Story.PlayerView.CYouTubePlayer;
 
 /**
  * Created by KICT-15 on 2016-07-06.
@@ -120,7 +121,7 @@ public class CStoryListClient extends AppCompatActivity
                 String url = item.Get_m_url();
 
                  /* TODO */
-                Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
+                Intent intent = new Intent(getApplicationContext(), CYouTubePlayer.class);
                 intent.putExtra("m_url", url);
                 startActivityForResult(intent, 0);
                 finish();
