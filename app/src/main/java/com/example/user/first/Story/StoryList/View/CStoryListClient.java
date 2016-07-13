@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -17,7 +18,6 @@ import com.example.user.first.Story.Story.PlayerView.CStory_Player;
 import com.example.user.first.Loading.Parsing.Lib.CStoryData;
 import com.example.user.first.Loading.Parsing.Interface.CStoryList;
 import com.example.user.first.R;
-import com.example.user.first.Story.Story.PlayerView.CYouTubePlayer;
 
 /**
  * Created by KICT-15 on 2016-07-06.
@@ -58,9 +58,11 @@ public class CStoryListClient extends AppCompatActivity
         setContentView(R.layout.story_layout);
 
         btnMeStory = (Button)findViewById(R.id.btnMeStory);
-        btnMeStory.setOnClickListener(new View.OnClickListener() {
+        btnMeStory.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
 
             }
         });
@@ -72,7 +74,8 @@ public class CStoryListClient extends AppCompatActivity
         listView.setAdapter(cStoryList);
 
         btnAll = (Button)findViewById(R.id.btnAll);
-        btnAll.setOnClickListener(new View.OnClickListener() {
+        btnAll.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v)
             {
@@ -82,7 +85,8 @@ public class CStoryListClient extends AppCompatActivity
         });
 
         btnInner = (Button)findViewById(R.id.btnInner);
-        btnInner.setOnClickListener(new View.OnClickListener() {
+        btnInner.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v)
             {
@@ -92,7 +96,8 @@ public class CStoryListClient extends AppCompatActivity
         });
 
         btnEx = (Button)findViewById(R.id.btnEx);
-        btnEx.setOnClickListener(new View.OnClickListener() {
+        btnEx.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v)
             {
@@ -102,16 +107,20 @@ public class CStoryListClient extends AppCompatActivity
         });
 
         btnTop = (Button)findViewById(R.id.btnTop);
-        btnTop.setOnClickListener(new View.OnClickListener() {
+        btnTop.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 listView.smoothScrollToPosition(0);
             }
         });
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
                 // get item
                 CStoryData item = (CStoryData)parent.getItemAtPosition(position);
 
@@ -121,8 +130,10 @@ public class CStoryListClient extends AppCompatActivity
                 String url = item.Get_m_url();
 
                  /* TODO */
-                Intent intent = new Intent(getApplicationContext(), CYouTubePlayer.class);
+                Log.i("1", "1");
+                Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
                 intent.putExtra("m_url", url);
+                Log.i("2", "2");
                 startActivityForResult(intent, 0);
                 finish();
             }

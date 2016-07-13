@@ -16,12 +16,14 @@ import com.example.user.first.Story.StoryList.View.CStoryListClient;
 /**
  * Created by USER on 2016-06-26.
  */
-public class CHome extends AppCompatActivity {
+public class CHome extends AppCompatActivity
+{
 
     TextView btnStory,btnEmotion,btnSetting,btn4,btn5;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
@@ -44,37 +46,49 @@ public class CHome extends AppCompatActivity {
 
 
 
-        btnStory.setOnClickListener(new View.OnClickListener() {
+        btnStory.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
                 startActivity(intent);
             }
         });
 
-        btnEmotion.setOnClickListener(new View.OnClickListener() {
+        btnEmotion.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Intent intent = new Intent(getApplicationContext(), CEmotion.class);
                 startActivity(intent);
             }
         });
 
-        btnSetting.setOnClickListener(new View.OnClickListener() {
+        btnSetting.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Intent intent = new Intent(getApplicationContext(), CSetting.class);
                 startActivity(intent);
             }
         });
-        btn4.setOnClickListener(new View.OnClickListener() {
+        btn4.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+
             }
         });
-        btn5.setOnClickListener(new View.OnClickListener() {
+        btn5.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+
             }
         });
     }

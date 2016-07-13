@@ -3,7 +3,8 @@ package com.example.user.first.Loading.Parsing.Lib;
 /**
  * Created by KICT-15 on 2016-07-08.
  */
-public class CTalkGuideLine_Data {
+public class CTalkGuideLine_Data
+{
     private String m_talkGuideLine;
 
     public String Get_m_talkGuideLine()

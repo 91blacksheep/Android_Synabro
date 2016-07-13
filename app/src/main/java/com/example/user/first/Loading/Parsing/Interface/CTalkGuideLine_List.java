@@ -19,7 +19,8 @@ public class CTalkGuideLine_List extends PagerAdapter
     LayoutInflater inflater;
     private ArrayList<CTalkGuideLine_Data> talkGuideLineList = new ArrayList<>();
 
-    public CTalkGuideLine_List(LayoutInflater inflater) {
+    public CTalkGuideLine_List(LayoutInflater inflater)
+    {
         // TODO Auto-generated constructor stub
 
         //전달 받은 LayoutInflater를 멤버변수로 전달
@@ -36,7 +37,8 @@ public class CTalkGuideLine_List extends PagerAdapter
     //PagerAdapter가 가지고 잇는 View의 개수를 리턴
     //보통 보여줘야하는 이미지 배열 데이터의 길이를 리턴
     @Override
-    public int getCount() {
+    public int getCount()
+    {
         // TODO Auto-generated method stub
         return talkGuideLineList.size();
     }
@@ -46,7 +48,8 @@ public class CTalkGuideLine_List extends PagerAdapter
     //첫번째 파라미터 : ViewPager
     //두번째 파라미터 : ViewPager가 보여줄 View의 위치(가장 처음부터 0,1,2,3...)
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(ViewGroup container, int position)
+    {
         // TODO Auto-generated method stub
 
         View view = null;
@@ -76,7 +79,8 @@ public class CTalkGuideLine_List extends PagerAdapter
     //두번째 파라미터 : 파괴될 View의 인덱스(가장 처음부터 0,1,2,3...)
     //세번째 파라미터 : 파괴될 객체(더 이상 보이지 않은 View 객체)
     @Override
-    public void destroyItem(ViewGroup container, int position, Object object) {
+    public void destroyItem(ViewGroup container, int position, Object object)
+    {
         // TODO Auto-generated method stub
 
         //ViewPager에서 보이지 않는 View는 제거
@@ -87,7 +91,8 @@ public class CTalkGuideLine_List extends PagerAdapter
 
     //instantiateItem() 메소드에서 리턴된 Ojbect가 View가  맞는지 확인하는 메소드
     @Override
-    public boolean isViewFromObject(View v, Object obj) {
+    public boolean isViewFromObject(View v, Object obj)
+    {
         // TODO Auto-generated method stub
         return v == obj;
     }
