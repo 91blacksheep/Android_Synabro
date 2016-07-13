@@ -22,6 +22,7 @@ public class CStory_Player extends AppCompatActivity
 {
     ViewPager pager;
     TextView textView;
+    TextView textView2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
