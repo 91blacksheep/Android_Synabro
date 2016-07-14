@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.user.first.R;
 import com.example.user.first.Loading.Parsing.Interface.CTalkGuideLine_List;
@@ -20,6 +21,8 @@ import com.example.user.first.Loading.Parsing.Interface.CTalkGuideLine_List;
 public class CStory_Player extends AppCompatActivity
 {
     ViewPager pager;
+    TextView textView;
+    TextView textView2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
