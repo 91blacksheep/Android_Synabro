@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.user.first.R;
 import com.example.user.first.Loading.Parsing.Lib.CTalkGuideLine_Data;
+import com.example.user.first.R;
 
 import java.util.ArrayList;
 
@@ -63,7 +63,7 @@ public class CTalkGuideLine_List extends PagerAdapter
         TextView tv_viewPager= (TextView) view.findViewById(R.id.tv_vp);
 
         //ImageView에 현재 position 번째에 해당하는 이미지를 보여주기 위한 작업
-        //현재 position에 해당하는 이미지를 setting
+        //현재 position에 해당하는 이미지를 setting_list
         CTalkGuideLine_Data listViewPagerItem = talkGuideLineList.get(position);
         tv_viewPager.setText(listViewPagerItem.Get_m_talkGuideLine());
 
@@ -74,7 +74,7 @@ public class CTalkGuideLine_List extends PagerAdapter
         return view;
     }
 
-    //화면에 보이지 않은 View는파쾨를 해서 메모리를 관리함.
+    //화면에 보이지 않은 View는파괴를 해서 메모리를 관리함.
     //첫번째 파라미터 : ViewPager
     //두번째 파라미터 : 파괴될 View의 인덱스(가장 처음부터 0,1,2,3...)
     //세번째 파라미터 : 파괴될 객체(더 이상 보이지 않은 View 객체)

@@ -2,30 +2,25 @@ package com.example.user.first.Home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.example.user.first.Emotion.CEmotion;
-import com.example.user.first.Setting.CSetting;
+import com.example.user.first.Emotion.CEmotion_List;
 import com.example.user.first.R;
+import com.example.user.first.Setting.CSetting_List;
 import com.example.user.first.Story.StoryList.View.CStoryListClient;
+import com.example.user.first.UiSetting.ToolBarSetting;
 
-/**
- * Created by USER on 2016-06-26.
- */
-public class CHome extends AppCompatActivity
-{
+public class CHome extends ToolBarSetting {
 
     TextView btnStory,btnEmotion,btnSetting,btn4,btn5;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.main_home_layout);
+
+        toolbar();
 
         btnStory = (TextView)findViewById(R.id.storybook);
         btnEmotion = (TextView)findViewById(R.id.emotion);
@@ -33,24 +28,15 @@ public class CHome extends AppCompatActivity
         btn4 = (TextView)findViewById(R.id.btn4);
         btn5 = (TextView)findViewById(R.id.btn5);
 
-        //타이틀 삭제 시작
-        Window win = getWindow();
-        win.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        textposition(btnStory,0,-17);
+        textposition(btnEmotion,23,-5);
+        textposition(btnSetting,16,13);
+        textposition(btn4,-10,13);
+        textposition(btn5,-17,-5);
 
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-        //타이틀 삭제 끝
-
-
-
-        btnStory.setOnClickListener(new View.OnClickListener()
-        {
+        btnStory.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
                 startActivity(intent);
             }
@@ -61,7 +47,7 @@ public class CHome extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent(getApplicationContext(), CEmotion.class);
+                Intent intent = new Intent(getApplicationContext(), CEmotion_List.class);
                 startActivity(intent);
             }
         });
@@ -71,7 +57,7 @@ public class CHome extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent(getApplicationContext(), CSetting.class);
+                Intent intent = new Intent(getApplicationContext(), CSetting_List.class);
                 startActivity(intent);
             }
         });
@@ -91,5 +77,8 @@ public class CHome extends AppCompatActivity
 
             }
         });
+
+
+
     }
 }

@@ -5,20 +5,18 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.user.first.R;
 import com.example.user.first.Loading.Parsing.Interface.CTalkGuideLine_List;
+import com.example.user.first.R;
+import com.example.user.first.UiSetting.ToolBarSetting;
 
 /**
  * Created by KICT-15 on 2016-07-08.
  */
-public class CStory_Player extends AppCompatActivity
+public class CStory_Player extends ToolBarSetting
 {
     ViewPager pager;
     TextView textView;
@@ -28,17 +26,9 @@ public class CStory_Player extends AppCompatActivity
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        //타이틀 삭제 시작
-        Window win = getWindow();
-        win.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.story_player_layout);
 
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-        //타이틀 삭제 끝
-        setContentView(R.layout.story_player);
+        toolbar();
 
         Intent intent = getIntent();
         String url = intent.getStringExtra("m_url");

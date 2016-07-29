@@ -48,7 +48,7 @@ public class CStoryList extends BaseAdapter
             notifyDataSetChanged();
         }
 
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "까만구름, 하얀구름", "▶ 우울한 마음", url+"=i1jSCpo1Vq0", "내적", "우울"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "까만구름, 하얀구름아아아아아아아", "▶ 우울한 마음", url+"=i1jSCpo1Vq0", "내적", "우울"));
         list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "나도 공주!", "▶ 질투", url+"=i1jSCpo1Vq0", "내적", "질투"));
         list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "또륵, 또르륵 사탕", "▶ 눈물은 언제 나는 걸까?", url+"=i1jSCpo1Vq0", "내적", "눈물"));
         list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"=i1jSCpo1Vq0", "내적", "미워하는마음"));
@@ -74,7 +74,7 @@ public class CStoryList extends BaseAdapter
         }
 
         /**/
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "내 등에 풍선이?! 어떻게 해요?", "▶ 폭력", url+"=i1jSCpo1Vq0", "외적", "폭력"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "내 등에 풍선이?! 어떻게 해요?dkdkdkdkdk", "▶ 폭력", url+"=i1jSCpo1Vq0", "외적", "폭력"));
         list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "띵똥땡똥, 띵똥땡똥", "▶ 가족관계", url+"=i1jSCpo1Vq0", "외적", "가족관계"));
         list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "리본 마을", "▶ 소리지르기", url+"=i1jSCpo1Vq0", "외적", "소리지르기"));
         list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "마음의 스케치북", "▶ 부정적인 언어 사용", url+"=i1jSCpo1Vq0", "외적", "비속어사용"));
@@ -115,7 +115,7 @@ public class CStoryList extends BaseAdapter
         if (convertView == null)
         {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.story_list_all, parent, false);
+            convertView = inflater.inflate(R.layout.story_list_item, parent, false);
         }
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
