@@ -14,8 +14,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="메뉴"
-            android:id="@+id/button11"
-            android:layout_gravity="left" />
+            android:id="@+id/btnMeStory"
+            android:layout_gravity="left"
+            android:layout_margin="0dp"
+            android:padding="0dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -30,14 +32,18 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="0dp"
+        android:padding="0dp">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="전체"
             android:id="@+id/btnAll"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_margin="0dp"
+            android:padding="0dp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -45,27 +51,47 @@
             android:text="내적"
             android:id="@+id/btnInner"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_margin="0dp"
+            android:padding="0dp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="외적"
             android:id="@+id/btnEx"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_margin="0dp"
+            android:padding="0dp" />
     </LinearLayout>
 
-    <ScrollView
+    <FrameLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollView"
-        android:fillViewport="true"
-        android:layout_gravity="center_horizontal" >
+        android:layout_height="match_parent">
 
-        <ListView
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrView"
+            android:fillViewport="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView" />
+        </ScrollView>
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/listView" />
-    </ScrollView>
+            android:text="↑"
+            android:id="@+id/btnTop"
+            android:layout_gravity="right|bottom"
+            android:textSize="25dp" />
+
+    </FrameLayout>
 
 </LinearLayout>

@@ -12,7 +12,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="메뉴"
-            android:id="@+id/button5"
+            android:id="@+id/btnMeHappy"
             android:layout_gravity="left" />
 
         <TextView
@@ -29,5 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/emotion_background" />
+        android:background="@drawable/emotion_background" >
+
+    </LinearLayout>
 </LinearLayout>
