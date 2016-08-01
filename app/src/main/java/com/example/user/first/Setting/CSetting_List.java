@@ -39,24 +39,18 @@ public class CSetting_List extends ToolBarSetting {
         btnWording.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
-                startActivity(intent);
             }
         });
 
         btnQnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
-                startActivity(intent);
             }
         });
 
         btnTutorial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
-                startActivity(intent);
             }
         });
 
