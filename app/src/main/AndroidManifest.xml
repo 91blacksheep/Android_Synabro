@@ -26,10 +26,6 @@
         <activity android:name=".Emotion.CPanic" />
         <activity android:name=".Story.StoryList.View.CStoryListClient" />
         <activity android:name=".Story.Story.PlayerView.CStory_Player" />
-        <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
