@@ -1,40 +1,41 @@
 package com.example.user.first.Story.Story.PlayerView;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.user.first.Lib.CDeveloperKey;
 import com.example.user.first.Loading.Parsing.Interface.CTalkGuideLine_List;
 import com.example.user.first.R;
-import com.example.user.first.UiSetting.ToolBarSetting;
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
 
 /**
  * Created by KICT-15 on 2016-07-08.
  */
-public class CStory_Player extends ToolBarSetting
+public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener
 {
     ViewPager pager;
-    TextView textView;
-    TextView textView2;
+    String url = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.story_player_layout);
-
-        toolbar();
+        setContentView(R.layout.story_player);
 
         Intent intent = getIntent();
-        String url = intent.getStringExtra("m_url");
-        Uri uri = Uri.parse(url);
-        intent = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(intent);
+        url = intent.getStringExtra("m_url");
+
+        /** Initializing YouTube player view **/
+        YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_player);
+        youTubePlayerView.initialize(CDeveloperKey.DEVELOPER_KEY, this);
 
         pager = (ViewPager) findViewById(R.id.pager);
 
@@ -49,10 +50,13 @@ public class CStory_Player extends ToolBarSetting
         pager.setAdapter(adapter);
 
         Button btnPre = (Button) findViewById(R.id.btn_pre);
-        if (btnPre != null) {
-            btnPre.setOnClickListener(new View.OnClickListener() {
+        if (btnPre != null)
+        {
+            btnPre.setOnClickListener(new View.OnClickListener()
+            {
                 @Override
-                public void onClick(View v) {
+                public void onClick(View v)
+                {
                     int position = pager.getCurrentItem();//현재 보여지는 아이템의 위치를 리턴
 
                     //현재 위치(position)에서 -1 을 해서 이전 position으로 변경
@@ -64,10 +68,13 @@ public class CStory_Player extends ToolBarSetting
             });
         }
         Button btnNext = (Button) findViewById(R.id.btn_next);
-        if (btnNext != null) {
-            btnNext.setOnClickListener(new View.OnClickListener() {
+        if (btnNext != null)
+        {
+            btnNext.setOnClickListener(new View.OnClickListener()
+            {
                 @Override
-                public void onClick(View v) {
+                public void onClick(View v)
+                {
                     int position = pager.getCurrentItem();//현재 보여지는 아이템의 위치를 리턴
 
                     //현재 위치(position)에서 -1 을 해서 이전 position으로 변경
@@ -79,4 +86,86 @@ public class CStory_Player extends ToolBarSetting
             });
         }
     }
+
+    @Override
+    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult result)
+    {
+        Toast.makeText(this, "Failured to Initialize!", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored)
+    {
+        /** add listeners to YouTubePlayer instance **/
+        player.setPlayerStateChangeListener(playerStateChangeListener);
+        player.setPlaybackEventListener(playbackEventListener);
+
+        /** Start buffering **/
+        if (!wasRestored)
+        {
+            //player.cueVideo(url);i1jSCpo1Vq0
+            player.cueVideo("i1jSCpo1Vq0");
+        }
+    }
+
+    private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener()
+    {
+        @Override
+        public void onBuffering(boolean arg0)
+        {
+        }
+
+        @Override
+        public void onPaused()
+        {
+        }
+
+        @Override
+        public void onPlaying()
+        {
+        }
+
+        @Override
+        public void onSeekTo(int arg0)
+        {
+        }
+
+        @Override
+        public void onStopped()
+        {
+        }
+    };
+
+    private YouTubePlayer.PlayerStateChangeListener playerStateChangeListener = new YouTubePlayer.PlayerStateChangeListener()
+    {
+        @Override
+        public void onAdStarted()
+        {
+        }
+
+        @Override
+        public void onError(YouTubePlayer.ErrorReason arg0)
+        {
+        }
+
+        @Override
+        public void onLoaded(String arg0)
+        {
+        }
+
+        @Override
+        public void onLoading()
+        {
+        }
+
+        @Override
+        public void onVideoEnded()
+        {
+        }
+
+        @Override
+        public void onVideoStarted()
+        {
+        }
+    };
 }

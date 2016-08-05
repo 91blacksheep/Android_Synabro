@@ -1,13 +1,10 @@
 package com.example.user.first.Setting;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.user.first.R;
-import com.example.user.first.Story.Story.PlayerView.CStory_Player;
-import com.example.user.first.UiSetting.TextPosition;
 import com.example.user.first.UiSetting.ToolBarSetting;
 
 /**

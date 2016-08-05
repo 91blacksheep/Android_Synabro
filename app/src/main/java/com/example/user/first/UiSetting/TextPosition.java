@@ -7,7 +7,8 @@ import android.widget.TextView;
 /**
  * Created by Administrator on 2016-07-22.
  */
-public class TextPosition extends AppCompatActivity {
+public class TextPosition extends AppCompatActivity
+{
 
     public void textposition(TextView textView,int x, int y){
 

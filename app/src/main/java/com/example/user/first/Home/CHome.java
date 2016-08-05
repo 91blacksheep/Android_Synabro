@@ -11,12 +11,14 @@ import com.example.user.first.Setting.CSetting_List;
 import com.example.user.first.Story.StoryList.View.CStoryListClient;
 import com.example.user.first.UiSetting.ToolBarSetting;
 
-public class CHome extends ToolBarSetting {
+public class CHome extends ToolBarSetting
+{
 
     TextView btnStory,btnEmotion,btnSetting,btn4,btn5;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_home_layout);
 
@@ -37,6 +39,7 @@ public class CHome extends ToolBarSetting {
         btnStory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
                 Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
                 startActivity(intent);
             }

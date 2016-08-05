@@ -9,10 +9,11 @@ import com.example.user.first.Loading.Client.CLoading;
 public class MainActivity extends AppCompatActivity
 {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
-        Intent intent = new Intent(getApplicationContext(),CLoading.class);
+        Intent intent = new Intent(getApplicationContext(), CLoading.class);
         startActivity(intent);
         finish();
     }

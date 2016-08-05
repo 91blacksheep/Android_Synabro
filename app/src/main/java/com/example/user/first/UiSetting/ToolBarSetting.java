@@ -19,11 +19,10 @@ import com.example.user.first.Story.StoryList.View.CStoryListClient;
 /**
  * Created by Administrator on 2016-07-21.
  */
-public class ToolBarSetting extends TextPosition
-        implements NavigationView.OnNavigationItemSelectedListener {
-
-    public void toolbar(){
-
+public class ToolBarSetting extends TextPosition implements NavigationView.OnNavigationItemSelectedListener
+{
+    public void toolbar()
+    {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         Button change = (Button)findViewById(R.id.changetext);
         setSupportActionBar(toolbar);
@@ -40,18 +39,23 @@ public class ToolBarSetting extends TextPosition
     }
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed()
+    {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
+        if (drawer.isDrawerOpen(GravityCompat.START))
+        {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        }
+        else
+        {
             super.onBackPressed();
         }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(MenuItem item)
+    {
         // Handle navigation view item clicks here.
 
         TextView textView = (TextView)findViewById(R.id.mytext);
@@ -61,31 +65,42 @@ public class ToolBarSetting extends TextPosition
 
         int id = item.getItemId();
 
-        if(id == R.id.nav_home){
+        if(id == R.id.nav_home)
+        {
             Intent intent = new Intent(getApplicationContext(), CHome.class);
             startActivity(intent);
             finish();
         }
-        else if (id == R.id.nav_storybook) {
+        else if (id == R.id.nav_storybook)
+        {
             // Handle the camera action
             Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
             startActivity(intent);
             finish();
-        } else if (id == R.id.nav_emotion_list) {
+        }
+        else if (id == R.id.nav_emotion_list)
+        {
             Intent intent = new Intent(getApplicationContext(), CEmotion_List.class);
             startActivity(intent);
             finish();
-
-        } else if (id == R.id.nav_setting) {
+        }
+        else if (id == R.id.nav_setting)
+        {
             Intent intent = new Intent(getApplicationContext(), CSetting_List.class);
             startActivity(intent);
             finish();
+        }
+        else if (id == R.id.nav_btn4)
+        {
 
-        } else if (id == R.id.nav_btn4) {
+        }
+        else if (id == R.id.nav_btn5)
+        {
 
-        } else if (id == R.id.nav_btn5) {
+        }
+        else if (id == R.id.changetext)
+        {
 
-        } else if (id == R.id.changetext) {
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

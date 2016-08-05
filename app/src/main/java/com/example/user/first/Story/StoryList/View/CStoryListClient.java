@@ -1,10 +1,8 @@
 package com.example.user.first.Story.StoryList.View;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -25,8 +23,6 @@ public class CStoryListClient extends ToolBarSetting
     /* value */
     Button btnAll, btnInner, btnEx, btnTop;
     ScrollView scrollView;
-
-    final String url = "https://www.youtube.com/watch?v";
 
     public ListView listView;
 
@@ -87,6 +83,8 @@ public class CStoryListClient extends ToolBarSetting
             public void onClick(View v)
             {
                 listView.smoothScrollToPosition(0);
+                Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
+                startActivity(intent);
             }
         });
 
@@ -98,18 +96,11 @@ public class CStoryListClient extends ToolBarSetting
                 // get item
                 CStoryData item = (CStoryData)parent.getItemAtPosition(position);
 
-                Drawable icon = item.Get_m_thumbnail();
-                String title = item.Get_m_title();
-                String ex = item.Get_m_ex();
                 String url = item.Get_m_url();
 
-                 /* TODO */
-                Log.i("1", "1");
                 Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
                 intent.putExtra("m_url", url);
-                Log.i("2", "2");
                 startActivityForResult(intent, 0);
-                finish();
             }
         });
     }

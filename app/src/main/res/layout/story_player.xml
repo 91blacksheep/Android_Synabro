@@ -33,7 +33,7 @@
                     android:id="@+id/tlbr_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="대화지도"
+                    android:text="동화책"
                     android:layout_gravity="center"
                     android:textSize="30dp"
                     android:textColor="#ffffff" />
@@ -45,6 +45,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal">
+
+                <com.google.android.youtube.player.YouTubePlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/youtube_player"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1" />
+
                 <android.support.v4.view.ViewPager
                     android:id="@+id/pager"
                     android:layout_width="match_parent"

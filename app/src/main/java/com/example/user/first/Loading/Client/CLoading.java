@@ -28,7 +28,7 @@ public class CLoading extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent(getApplicationContext(),CHome.class);
+                Intent intent = new Intent(getApplicationContext(), CHome.class);
                 startActivity(intent);
                 finish();
             }

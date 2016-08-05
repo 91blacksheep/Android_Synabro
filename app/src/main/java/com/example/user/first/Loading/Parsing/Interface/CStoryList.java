@@ -20,7 +20,7 @@ import java.util.ArrayList;
  */
 public class CStoryList extends BaseAdapter
 {
-    final String url = "https://www.youtube.com/watch?v";
+    final String url = "https://www.youtube.com/watch?v=";
 
     //  Adapter에 추가된 데이터를 저장하기 위한 ArrayList
     private ArrayList<CStoryData> list = null;
@@ -48,20 +48,20 @@ public class CStoryList extends BaseAdapter
             notifyDataSetChanged();
         }
 
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "까만구름, 하얀구름아아아아아아아", "▶ 우울한 마음", url+"=i1jSCpo1Vq0", "내적", "우울"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "나도 공주!", "▶ 질투", url+"=i1jSCpo1Vq0", "내적", "질투"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "또륵, 또르륵 사탕", "▶ 눈물은 언제 나는 걸까?", url+"=i1jSCpo1Vq0", "내적", "눈물"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"=i1jSCpo1Vq0", "내적", "미워하는마음"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "어두운 밤", "▶ 두려움", url+"=i1jSCpo1Vq0", "내적", "두려움"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "콩닥, 철썩 파도", "▶ 심장은 왜 뛰는 걸까?", url+"=i1jSCpo1Vq0", "내적", "정서의형성"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "내 등에 풍선이?! 어떻게 해요?", "▶ 폭력", url+"=i1jSCpo1Vq0", "외적", "폭력"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "띵똥땡똥, 띵똥땡똥", "▶ 가족관계", url+"=i1jSCpo1Vq0", "외적", "가족관계"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "리본 마을", "▶ 소리지르기", url+"=i1jSCpo1Vq0", "외적", "소리지르기"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "마음의 스케치북", "▶ 부정적인 언어 사용", url+"=i1jSCpo1Vq0", "외적", "비속어사용"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "별콩이와 달콩이", "▶ 친구관계", url+"=i1jSCpo1Vq0", "외적", "교우관계"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "손가락 사탕", "▶ 손톱 물어뜯기", url+"=i1jSCpo1Vq0", "외적", "습관"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "야금야금 우걱우걱", "▶ 간식의 남용", url+"=i1jSCpo1Vq0", "외적", "간식남용"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "폭폭이의 달리기", "▶ 떼 쓰기", url+"=i1jSCpo1Vq0", "외적", "떼쓰기"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "까만구름, 하얀구름아", "▶ 우울한 마음", url+"i1jSCpo1Vq0", "내적", "우울"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "나도 공주!", "▶ 질투", url+"i1jSCpo1Vq0", "내적", "질투"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "또륵, 또르륵 사탕", "▶ 눈물은 언제 나는 걸까?", url+"i1jSCpo1Vq0", "내적", "눈물"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"i1jSCpo1Vq0", "내적", "미워하는마음"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "어두운 밤", "▶ 두려움", url+"i1jSCpo1Vq0", "내적", "두려움"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "콩닥, 철썩 파도", "▶ 심장은 왜 뛰는 걸까?", url+"i1jSCpo1Vq0", "내적", "정서의형성"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "내 등에 풍선이?! 어떻게 해요?", "▶ 폭력", url+"i1jSCpo1Vq0", "외적", "폭력"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "띵똥땡똥, 띵똥땡똥", "▶ 가족관계", url+"i1jSCpo1Vq0", "외적", "가족관계"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "리본 마을", "▶ 소리지르기", url+"i1jSCpo1Vq0", "외적", "소리지르기"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "마음의 스케치북", "▶ 부정적인 언어 사용", url+"i1jSCpo1Vq0", "외적", "비속어사용"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "별콩이와 달콩이", "▶ 친구관계", url+"i1jSCpo1Vq0", "외적", "교우관계"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "손가락 사탕", "▶ 손톱 물어뜯기", url+"i1jSCpo1Vq0", "외적", "습관"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "야금야금 우걱우걱", "▶ 간식의 남용", url+"i1jSCpo1Vq0", "외적", "간식남용"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "폭폭이의 달리기", "▶ 떼 쓰기", url+"i1jSCpo1Vq0", "외적", "떼쓰기"));
 
     }
 
@@ -74,14 +74,14 @@ public class CStoryList extends BaseAdapter
         }
 
         /**/
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "내 등에 풍선이?! 어떻게 해요?dkdkdkdkdk", "▶ 폭력", url+"=i1jSCpo1Vq0", "외적", "폭력"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "띵똥땡똥, 띵똥땡똥", "▶ 가족관계", url+"=i1jSCpo1Vq0", "외적", "가족관계"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "리본 마을", "▶ 소리지르기", url+"=i1jSCpo1Vq0", "외적", "소리지르기"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "마음의 스케치북", "▶ 부정적인 언어 사용", url+"=i1jSCpo1Vq0", "외적", "비속어사용"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "별콩이와 달콩이", "▶ 친구관계", url+"=i1jSCpo1Vq0", "외적", "교우관계"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "손가락 사탕", "▶ 손톱 물어뜯기", url+"=i1jSCpo1Vq0", "외적", "습관"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "야금야금 우걱우걱", "▶ 간식의 남용", url+"=i1jSCpo1Vq0", "외적", "간식남용"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "폭폭이의 달리기", "▶ 떼 쓰기", url+"=i1jSCpo1Vq0", "외적", "떼쓰기"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "내 등에 풍선이?! 어떻게 해요?", "▶ 폭력", url+"i1jSCpo1Vq0", "외적", "폭력"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "띵똥땡똥, 띵똥땡똥", "▶ 가족관계", url+"i1jSCpo1Vq0", "외적", "가족관계"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "리본 마을", "▶ 소리지르기", url+"i1jSCpo1Vq0", "외적", "소리지르기"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "마음의 스케치북", "▶ 부정적인 언어 사용", url+"i1jSCpo1Vq0", "외적", "비속어사용"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "별콩이와 달콩이", "▶ 친구관계", url+"i1jSCpo1Vq0", "외적", "교우관계"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "손가락 사탕", "▶ 손톱 물어뜯기", url+"i1jSCpo1Vq0", "외적", "습관"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "야금야금 우걱우걱", "▶ 간식의 남용", url+"i1jSCpo1Vq0", "외적", "간식남용"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "폭폭이의 달리기", "▶ 떼 쓰기", url+"i1jSCpo1Vq0", "외적", "떼쓰기"));
     }
     public void OnClickTapInner()
     {
@@ -92,13 +92,13 @@ public class CStoryList extends BaseAdapter
         }
 
         /**/
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "구름아 내마음을 말해줘", "▶ 감정은 무엇일까?", url+"=i1jSCpo1Vq0", "내적", "감정"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "까만구름, 하얀구름", "▶ 우울한 마음", url+"=i1jSCpo1Vq0", "내적", "우울"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "나도 공주!", "▶ 질투", url+"=i1jSCpo1Vq0", "내적", "질투"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "또륵, 또르륵 사탕", "▶ 눈물은 언제 나는 걸까?", url+"=i1jSCpo1Vq0", "내적", "눈물"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"=i1jSCpo1Vq0", "내적", "미워하는마음"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "어두운 밤", "▶ 두려움", url+"=i1jSCpo1Vq0", "내적", "두려움"));
-        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "콩닥, 철썩 파도", "▶ 심장은 왜 뛰는 걸까?", url+"=i1jSCpo1Vq0", "내적", "정서의형성"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "구름아 내마음을 말해줘", "▶ 감정은 무엇일까?", url+"i1jSCpo1Vq0", "내적", "감정"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "까만구름, 하얀구름", "▶ 우울한 마음", url+"i1jSCpo1Vq0", "내적", "우울"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "나도 공주!", "▶ 질투", url+"i1jSCpo1Vq0", "내적", "질투"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "또륵, 또르륵 사탕", "▶ 눈물은 언제 나는 걸까?", url+"i1jSCpo1Vq0", "내적", "눈물"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"i1jSCpo1Vq0", "내적", "미워하는마음"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "어두운 밤", "▶ 두려움", url+"i1jSCpo1Vq0", "내적", "두려움"));
+        list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "콩닥, 철썩 파도", "▶ 심장은 왜 뛰는 걸까?", url+"i1jSCpo1Vq0", "내적", "정서의형성"));
 
     }
 

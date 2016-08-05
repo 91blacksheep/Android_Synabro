@@ -27,5 +27,6 @@
         <activity android:name=".Story.StoryList.View.CStoryListClient" />
         <activity android:name=".Story.Story.PlayerView.CStory_Player" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
