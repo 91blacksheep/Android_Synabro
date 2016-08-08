@@ -20,10 +20,6 @@ public class CHome extends AppCompatActivity
 
     CDrawer cDrawer = null;
     CTextPosition cTextPosition = null;
-    /*CTextPosition emotionCTextPosition = null;
-    CTextPosition settingCTextPosition = null;
-    CTextPosition ex4CTextPosition = null;
-    CTextPosition ex5CTextPosition = null;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

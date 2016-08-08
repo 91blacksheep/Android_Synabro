@@ -46,9 +46,3 @@ public class CTextPosition extends AppCompatActivity
         textView.setY((deviceY / 100) * y);
     }
 }
-
-/*storyCTextPosition = new CTextPosition(btnStory, 0, -17, this);
-        emotionCTextPosition = new CTextPosition(btnEmotion, 23, -5, this);
-        settingCTextPosition = new CTextPosition(btnSetting, 16, 13, this);
-        ex4CTextPosition = new CTextPosition(btn4, -10, 13, this);
-        ex5CTextPosition = new CTextPosition(btn5, -17, -5, this);*/

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.user.first.R;
+import com.example.user.first.UiSetting.CTextPosition;
 import com.example.user.first.UiSetting.ToolBarSetting;
 
 /**
@@ -15,14 +16,13 @@ import com.example.user.first.UiSetting.ToolBarSetting;
 public class CEmotion_List extends AppCompatActivity
 {
 
-    TextView BtnHappy,BtnSad,BtnPanic,BtnAnger,BtnDisGust;
+    TextView BtnHappy, BtnSad, BtnPanic, BtnAnger, BtnDisGust;
+    CTextPosition cTextPosition = null;
 
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emotion_list_layout);
-
-        //toolbar();
 
         BtnHappy = (TextView)findViewById(R.id.Happy);
         BtnSad = (TextView)findViewById(R.id.Sad);
@@ -30,11 +30,7 @@ public class CEmotion_List extends AppCompatActivity
         BtnAnger = (TextView)findViewById(R.id.Anger);
         BtnDisGust = (TextView)findViewById(R.id.DisGust);
 
-        /*textposition(BtnHappy, -1, -17);
-        textposition(BtnSad, 20, -5);
-        textposition(BtnAnger, 13, 13);
-        textposition(BtnPanic, -13, 13);
-        textposition(BtnDisGust, -20, -5);*/
+        cTextPosition = new CTextPosition(BtnHappy, BtnSad, BtnPanic, BtnAnger, BtnDisGust, this);
 
         BtnHappy.setOnClickListener(new View.OnClickListener()
         {
