@@ -22,20 +22,23 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center">
+            android:gravity="center"
+            android:focusable="false">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="나만의 글귀"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:gravity="center" />
+                android:gravity="center"
+                android:focusable="false"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="수정"
-                android:id="@+id/changetext" />
+                android:id="@+id/changetext"
+                android:focusable="false" />
         </LinearLayout>
 
         <TextView

@@ -88,20 +88,21 @@ public class CStoryListClient extends ToolBarSetting
             }
         });
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
-                // get item
-                CStoryData item = (CStoryData)parent.getItemAtPosition(position);
-
-                String url = item.Get_m_url();
-
-                Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
-                intent.putExtra("m_url", url);
-                startActivityForResult(intent, 0);
-            }
-        });
+        listView.setOnItemClickListener(mItemClickListener);
     }
+
+    private AdapterView.OnItemClickListener mItemClickListener = new AdapterView.OnItemClickListener()
+    {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long l_position)
+        {
+            CStoryData item = (CStoryData)parent.getItemAtPosition(position);
+
+            String url = item.Get_m_url();
+
+            Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
+            intent.putExtra("m_url", url);
+            startActivityForResult(intent, 0);
+        }
+    };
 }
