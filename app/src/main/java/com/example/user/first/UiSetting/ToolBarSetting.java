@@ -14,6 +14,7 @@ import com.example.user.first.Emotion.CEmotion_List;
 import com.example.user.first.Home.CHome;
 import com.example.user.first.R;
 import com.example.user.first.Setting.CSetting_List;
+import com.example.user.first.Story.Story.PlayerView.CStory_Player;
 import com.example.user.first.Story.StoryList.View.CStoryListClient;
 
 /**
@@ -69,30 +70,27 @@ public class ToolBarSetting extends TextPosition implements NavigationView.OnNav
         {
             Intent intent = new Intent(getApplicationContext(), CHome.class);
             startActivity(intent);
-            finish();
         }
         else if (id == R.id.nav_storybook)
         {
             // Handle the camera action
             Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
             startActivity(intent);
-            finish();
         }
         else if (id == R.id.nav_emotion_list)
         {
             Intent intent = new Intent(getApplicationContext(), CEmotion_List.class);
             startActivity(intent);
-            finish();
         }
         else if (id == R.id.nav_setting)
         {
             Intent intent = new Intent(getApplicationContext(), CSetting_List.class);
             startActivity(intent);
-            finish();
         }
         else if (id == R.id.nav_btn4)
         {
-
+            Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_btn5)
         {
