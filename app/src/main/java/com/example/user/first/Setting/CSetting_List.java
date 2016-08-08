@@ -10,12 +10,14 @@ import com.example.user.first.UiSetting.ToolBarSetting;
 /**
  * Created by USER on 2016-06-26.
  */
-public class CSetting_List extends ToolBarSetting {
+public class CSetting_List extends ToolBarSetting
+{
 
     TextView btnWording,btnQnA,btnTutorial,btnCreate,btn5;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting_list_layout);
 
@@ -33,33 +35,48 @@ public class CSetting_List extends ToolBarSetting {
         textposition(btnCreate,-6,13);
         textposition(btn5,-13,-5);
 
-        btnWording.setOnClickListener(new View.OnClickListener() {
+        btnWording.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+
             }
         });
 
-        btnQnA.setOnClickListener(new View.OnClickListener() {
+        btnQnA.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+
             }
         });
 
-        btnTutorial.setOnClickListener(new View.OnClickListener() {
+        btnTutorial.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+
             }
         });
 
-        btnCreate.setOnClickListener(new View.OnClickListener() {
+        btnCreate.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+
             }
         });
 
-        btn5.setOnClickListener(new View.OnClickListener() {
+        btn5.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+
             }
         });
     }

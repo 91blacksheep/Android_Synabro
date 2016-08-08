@@ -9,9 +9,8 @@ import android.widget.TextView;
  */
 public class TextPosition extends AppCompatActivity
 {
-
-    public void textposition(TextView textView,int x, int y){
-
+    public void textposition(TextView textView,int x, int y)
+    {
         //디바이스 크기 불러오기
         DisplayMetrics device = getApplicationContext().getResources().getDisplayMetrics();
         float deviceX = device.widthPixels;

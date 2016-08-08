@@ -8,8 +8,10 @@ import com.example.user.first.UiSetting.ToolBarSetting;
 /**
  * Created by USER on 2016-06-26.
  */
-public class CSad extends ToolBarSetting {
-    protected void onCreate(Bundle savedInstanceState) {
+public class CSad extends ToolBarSetting
+{
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emotion_sad_layout);
 

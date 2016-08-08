@@ -21,8 +21,6 @@ public class CTalkGuideLine_List extends PagerAdapter
 
     public CTalkGuideLine_List(LayoutInflater inflater)
     {
-        // TODO Auto-generated constructor stub
-
         //전달 받은 LayoutInflater를 멤버변수로 전달
         this.inflater = inflater;
 
@@ -39,7 +37,6 @@ public class CTalkGuideLine_List extends PagerAdapter
     @Override
     public int getCount()
     {
-        // TODO Auto-generated method stub
         return talkGuideLineList.size();
     }
 
@@ -50,8 +47,6 @@ public class CTalkGuideLine_List extends PagerAdapter
     @Override
     public Object instantiateItem(ViewGroup container, int position)
     {
-        // TODO Auto-generated method stub
-
         View view = null;
 
         //새로운 View 객체를 Layoutinflater를 이용해서 생성
@@ -81,19 +76,15 @@ public class CTalkGuideLine_List extends PagerAdapter
     @Override
     public void destroyItem(ViewGroup container, int position, Object object)
     {
-        // TODO Auto-generated method stub
-
         //ViewPager에서 보이지 않는 View는 제거
         //세번째 파라미터가 View 객체 이지만 데이터 타입이 Object여서 형변환 실시
         container.removeView((View)object);
-
     }
 
     //instantiateItem() 메소드에서 리턴된 Ojbect가 View가  맞는지 확인하는 메소드
     @Override
     public boolean isViewFromObject(View v, Object obj)
     {
-        // TODO Auto-generated method stub
         return v == obj;
     }
 
@@ -102,7 +93,6 @@ public class CTalkGuideLine_List extends PagerAdapter
         CTalkGuideLine_Data item = new CTalkGuideLine_Data();
 
         item.Set_m_talkGuideLine(text);
-        /* TODO */
 
         talkGuideLineList.add(item);
     }

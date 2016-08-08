@@ -36,10 +36,11 @@ public class CHome extends ToolBarSetting
         textposition(btn4,-10,13);
         textposition(btn5,-17,-5);
 
-        btnStory.setOnClickListener(new View.OnClickListener() {
+        btnStory.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
-                //Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
+            public void onClick(View v)
+            {
                 Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
                 startActivity(intent);
             }
@@ -80,8 +81,5 @@ public class CHome extends ToolBarSetting
 
             }
         });
-
-
-
     }
 }

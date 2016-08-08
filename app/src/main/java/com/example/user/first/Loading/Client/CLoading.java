@@ -12,7 +12,8 @@ import com.example.user.first.R;
 /**
  * Created by Administrator on 2016-07-22.
  */
-public class CLoading extends AppCompatActivity {
+public class CLoading extends AppCompatActivity
+{
 
     TextView TView;
 

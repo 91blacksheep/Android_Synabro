@@ -62,7 +62,6 @@ public class CStoryList extends BaseAdapter
         list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "손가락 사탕", "▶ 손톱 물어뜯기", url+"i1jSCpo1Vq0", "외적", "습관"));
         list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "야금야금 우걱우걱", "▶ 간식의 남용", url+"i1jSCpo1Vq0", "외적", "간식남용"));
         list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "폭폭이의 달리기", "▶ 떼 쓰기", url+"i1jSCpo1Vq0", "외적", "떼쓰기"));
-
     }
 
     public void OnClickTapEx()
@@ -83,6 +82,7 @@ public class CStoryList extends BaseAdapter
         list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "야금야금 우걱우걱", "▶ 간식의 남용", url+"i1jSCpo1Vq0", "외적", "간식남용"));
         list.add(new CStoryData(ContextCompat.getDrawable(m_context, R.drawable.flower), "폭폭이의 달리기", "▶ 떼 쓰기", url+"i1jSCpo1Vq0", "외적", "떼쓰기"));
     }
+
     public void OnClickTapInner()
     {
         if(list.size() > 0)

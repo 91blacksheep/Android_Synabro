@@ -8,9 +8,11 @@ import com.example.user.first.UiSetting.ToolBarSetting;
 /**
  * Created by USER on 2016-06-26.
  */
-public class CHappy extends ToolBarSetting {
+public class CHappy extends ToolBarSetting
+{
 
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emotion_happy_layout);
 
