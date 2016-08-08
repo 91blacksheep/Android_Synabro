@@ -1,6 +1,7 @@
 package com.example.user.first.Emotion;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.user.first.R;
 import com.example.user.first.UiSetting.ToolBarSetting;
@@ -8,7 +9,7 @@ import com.example.user.first.UiSetting.ToolBarSetting;
 /**
  * Created by USER on 2016-06-26.
  */
-public class CHappy extends ToolBarSetting
+public class CHappy extends AppCompatActivity
 {
 
     protected void onCreate(Bundle savedInstanceState)
@@ -16,6 +17,6 @@ public class CHappy extends ToolBarSetting
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emotion_happy_layout);
 
-        toolbar();
+        //toolbar();
     }
 }

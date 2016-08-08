@@ -1,21 +1,13 @@
 package com.example.user.first.UiSetting;
 
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.example.user.first.Emotion.CEmotion_List;
 import com.example.user.first.Home.CHome;
@@ -25,11 +17,11 @@ import com.example.user.first.Story.Story.PlayerView.CStory_Player;
 import com.example.user.first.Story.StoryList.View.CStoryListClient;
 
 /**
- * Created by Administrator on 2016-07-21.
+ * Created by USER on 2016-08-08.
  */
-public class ToolBarSetting extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+public class CDrawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
-    public void toolbar()
+    public CDrawer()
     {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -44,39 +36,6 @@ public class ToolBarSetting extends AppCompatActivity implements NavigationView.
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        final LinearLayout linear = (LinearLayout) getLayoutInflater().inflate(R.layout.my_text_setting, null);
-        Button change = (Button)findViewById(R.id.changetext);
-        assert change != null;
-        change.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                AlertDialog.Builder dlg = new AlertDialog.Builder(getApplicationContext());
-                dlg.setTitle("나만의 글귀");
-                dlg.setView(linear);
-                dlg.setPositiveButton("확인", new DialogInterface.OnClickListener()
-                {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which)
-                    {
-                        TextView textView = (TextView)findViewById(R.id.mytext);
-                        EditText edt = (EditText)linear.findViewById(R.id.sendMSG);
-                        textView.setText(edt.getText().toString());
-                    }
-                });
-                dlg.setNegativeButton("취소", new DialogInterface.OnClickListener()
-                {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which)
-                    {
-                        dialog.cancel();
-                    }
-                });
-                dlg.show();
-            }
-        });
     }
 
     @Override

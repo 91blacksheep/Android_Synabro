@@ -3,6 +3,7 @@ package com.example.user.first.Story.StoryList.View;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -18,7 +19,7 @@ import com.example.user.first.UiSetting.ToolBarSetting;
 /**
  * Created by KICT-15 on 2016-07-06.
  */
-public class CStoryListClient extends ToolBarSetting
+public class CStoryListClient extends AppCompatActivity
 {
     /* value */
     Button btnAll, btnInner, btnEx, btnTop;
@@ -34,7 +35,7 @@ public class CStoryListClient extends ToolBarSetting
         super.onCreate(savedInstanceState);
         setContentView(R.layout.story_list_layout);
 
-        toolbar();
+        //toolbar();
 
         cStoryList = new CStoryList(this);
 

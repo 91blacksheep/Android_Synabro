@@ -2,6 +2,7 @@ package com.example.user.first.Emotion;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -11,7 +12,7 @@ import com.example.user.first.UiSetting.ToolBarSetting;
 /**
  * Created by USER on 2016-06-26.
  */
-public class CEmotion_List extends ToolBarSetting
+public class CEmotion_List extends AppCompatActivity
 {
 
     TextView BtnHappy,BtnSad,BtnPanic,BtnAnger,BtnDisGust;
@@ -21,7 +22,7 @@ public class CEmotion_List extends ToolBarSetting
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emotion_list_layout);
 
-        toolbar();
+        //toolbar();
 
         BtnHappy = (TextView)findViewById(R.id.Happy);
         BtnSad = (TextView)findViewById(R.id.Sad);
@@ -29,11 +30,11 @@ public class CEmotion_List extends ToolBarSetting
         BtnAnger = (TextView)findViewById(R.id.Anger);
         BtnDisGust = (TextView)findViewById(R.id.DisGust);
 
-        textposition(BtnHappy, -1, -17);
+        /*textposition(BtnHappy, -1, -17);
         textposition(BtnSad, 20, -5);
         textposition(BtnAnger, 13, 13);
         textposition(BtnPanic, -13, 13);
-        textposition(BtnDisGust, -20, -5);
+        textposition(BtnDisGust, -20, -5);*/
 
         BtnHappy.setOnClickListener(new View.OnClickListener()
         {

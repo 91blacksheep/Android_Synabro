@@ -1,6 +1,7 @@
 package com.example.user.first.Setting;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,7 +11,7 @@ import com.example.user.first.UiSetting.ToolBarSetting;
 /**
  * Created by USER on 2016-06-26.
  */
-public class CSetting_List extends ToolBarSetting
+public class CSetting_List extends AppCompatActivity
 {
 
     TextView btnWording,btnQnA,btnTutorial,btnCreate,btn5;
@@ -21,7 +22,7 @@ public class CSetting_List extends ToolBarSetting
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting_list_layout);
 
-        toolbar();
+        //toolbar();
 
         btnWording = (TextView)findViewById(R.id.wording);
         btnQnA = (TextView)findViewById(R.id.QnA);
@@ -29,11 +30,11 @@ public class CSetting_List extends ToolBarSetting
         btnCreate = (TextView)findViewById(R.id.create);
         btn5 = (TextView)findViewById(R.id.btn5);
 
-        textposition(btnWording,7,-17);
+        /*textposition(btnWording,7,-17);
         textposition(btnQnA,26,-5);
         textposition(btnTutorial,13,13);
         textposition(btnCreate,-6,13);
-        textposition(btn5,-13,-5);
+        textposition(btn5,-13,-5);*/
 
         btnWording.setOnClickListener(new View.OnClickListener()
         {
