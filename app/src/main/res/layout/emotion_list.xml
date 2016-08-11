@@ -57,6 +57,7 @@
                     android:layout_height="wrap_content"
                     android:text="기쁨"
                     android:id="@+id/Happy"
+                    android:onClick="onClickButton"
                     android:textSize="30dp" />
 
                 <TextView
@@ -64,6 +65,7 @@
                     android:layout_height="wrap_content"
                     android:text="혐오"
                     android:id="@+id/DisGust"
+                    android:onClick="onClickButton"
                     android:textSize="30dp" />
 
                 <TextView
@@ -71,6 +73,7 @@
                     android:layout_height="wrap_content"
                     android:text="슬픔"
                     android:id="@+id/Sad"
+                    android:onClick="onClickButton"
                     android:textSize="30dp" />
 
                 <TextView
@@ -78,6 +81,7 @@
                     android:layout_height="wrap_content"
                     android:text="공포"
                     android:id="@+id/Panic"
+                    android:onClick="onClickButton"
                     android:textSize="30dp" />
 
                 <TextView
@@ -85,6 +89,7 @@
                     android:layout_height="wrap_content"
                     android:text="분노"
                     android:id="@+id/Anger"
+                    android:onClick="onClickButton"
                     android:textSize="30dp" />
             </RelativeLayout>
 

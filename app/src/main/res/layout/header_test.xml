@@ -38,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="수정"
                 android:id="@+id/changetext"
+                android:onClick="onClickButton"
                 android:focusable="false" />
         </LinearLayout>
 

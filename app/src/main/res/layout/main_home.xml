@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    style="@style/AlertDialog.AppCompat.Light">
 
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/homemain"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/ll_main"
@@ -40,7 +41,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/mywording"
                 android:id="@+id/mytext"
                 android:layout_gravity="center_horizontal"
                 android:textSize="30dp"
@@ -59,6 +59,7 @@
                     android:layout_height="wrap_content"
                     android:text="동화책"
                     android:id="@+id/storybook"
+                    android:onClick="onClickButton"
                     android:textSize="30dp" />
 
                 <TextView
@@ -66,6 +67,7 @@
                     android:layout_height="wrap_content"
                     android:text="정서"
                     android:id="@+id/emotion"
+                    android:onClick="onClickButton"
                     android:textSize="30dp" />
 
                 <TextView
@@ -73,6 +75,7 @@
                     android:layout_height="wrap_content"
                     android:text="혐오"
                     android:id="@+id/btn5"
+                    android:onClick="onClickButton"
                     android:textSize="30dp" />
 
                 <TextView
@@ -80,6 +83,7 @@
                     android:layout_height="wrap_content"
                     android:text="설정"
                     android:id="@+id/setting"
+                    android:onClick="onClickButton"
                     android:textSize="30dp" />
 
                 <TextView
@@ -87,6 +91,7 @@
                     android:layout_height="wrap_content"
                     android:text="공포"
                     android:id="@+id/btn4"
+                    android:onClick="onClickButton"
                     android:textSize="30dp" />
             </RelativeLayout>
         </LinearLayout>

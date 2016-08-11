@@ -1,20 +1,34 @@
 package com.example.user.first.Setting;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.user.first.Emotion.CEmotion_List;
+import com.example.user.first.Home.CHome;
 import com.example.user.first.R;
-import com.example.user.first.UiSetting.ToolBarSetting;
+import com.example.user.first.Story.Story.PlayerView.CStory_Player;
+import com.example.user.first.Story.StoryList.View.CStoryListClient;
+import com.example.user.first.UiSetting.CTextPosition;
 
 /**
  * Created by USER on 2016-06-26.
  */
-public class CSetting_List extends AppCompatActivity
+public class CSetting_List extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
+    TextView btnWording, btnQnA, btnTutorial, btnCreate, btn5;
+    Toolbar toolbar;
+    NavigationView navigationView;
 
-    TextView btnWording,btnQnA,btnTutorial,btnCreate,btn5;
+    CTextPosition cTextPosition = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -22,63 +36,113 @@ public class CSetting_List extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting_list_layout);
 
-        //toolbar();
-
         btnWording = (TextView)findViewById(R.id.wording);
         btnQnA = (TextView)findViewById(R.id.QnA);
         btnTutorial = (TextView)findViewById(R.id.tutorial);
         btnCreate = (TextView)findViewById(R.id.create);
         btn5 = (TextView)findViewById(R.id.btn5);
 
-        /*textposition(btnWording,7,-17);
-        textposition(btnQnA,26,-5);
-        textposition(btnTutorial,13,13);
-        textposition(btnCreate,-6,13);
-        textposition(btn5,-13,-5);*/
+        /**/
+        cTextPosition = new CTextPosition(btnWording, btnQnA, btnTutorial, btnCreate, btn5, this);
+        SetNav();
 
-        btnWording.setOnClickListener(new View.OnClickListener()
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    private void SetNav()
+    {
+        /**/
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(null);
+
+        DrawerLayout drawer = (DrawerLayout)findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    public void onClickButton(View v)
+    {
+        switch(v.getId())
         {
-            @Override
-            public void onClick(View v)
-            {
+            case R.id.wording:
+                break;
+            case R.id.QnA:
+                break;
+            case R.id.tutorial:
+                break;
+            case R.id.create:
+                break;
+            case R.id.btn5:
+                break;
+        }
+    }
 
-            }
-        });
-
-        btnQnA.setOnClickListener(new View.OnClickListener()
+    @Override
+    public void onBackPressed()
+    {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START))
         {
-            @Override
-            public void onClick(View v)
-            {
-
-            }
-        });
-
-        btnTutorial.setOnClickListener(new View.OnClickListener()
+            drawer.closeDrawer(GravityCompat.START);
+        }
+        else
         {
-            @Override
-            public void onClick(View v)
-            {
+            super.onBackPressed();
+        }
+    }
 
-            }
-        });
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item)
+    {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
 
-        btnCreate.setOnClickListener(new View.OnClickListener()
+        if(id == R.id.nav_home)
         {
-            @Override
-            public void onClick(View v)
-            {
-
-            }
-        });
-
-        btn5.setOnClickListener(new View.OnClickListener()
+            Intent intent = new Intent(getApplicationContext(), CHome.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_storybook)
         {
-            @Override
-            public void onClick(View v)
-            {
+            Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_emotion_list)
+        {
+            Intent intent = new Intent(getApplicationContext(), CEmotion_List.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_setting)
+        {
+            Intent intent = new Intent(getApplicationContext(), CSetting_List.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_btn4)
+        {
+            Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_btn5)
+        {
 
-            }
-        });
+        }
+        else if (id == R.id.changetext)
+        {
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+
+        return true;
     }
 }

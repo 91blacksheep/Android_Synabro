@@ -10,9 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.user.first.UiSetting.CMyText;
 import com.example.user.first.Emotion.CEmotion_List;
 import com.example.user.first.R;
 import com.example.user.first.Setting.CSetting_List;
@@ -23,10 +23,12 @@ import com.example.user.first.UiSetting.CTextPosition;
 public class CHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
     TextView btnStory, btnEmotion, btnSetting, btn4, btn5;
-    TextView nav_header_text;
-    Button nav_header_btn;
-    View nav_header_view;
+    TextView myText;
+
     Toolbar toolbar;
+    View nav_header_view;
+    TextView nav_header_txt;
+    NavigationView navigationView;
 
     CTextPosition cTextPosition = null;
 
@@ -42,12 +44,28 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
         btnSetting = (TextView)findViewById(R.id.setting);
         btn4 = (TextView)findViewById(R.id.btn4);
         btn5 = (TextView)findViewById(R.id.btn5);
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
+
+        myText = (TextView)findViewById(R.id.mytext);
 
         /**/
         cTextPosition = new CTextPosition(btnStory, btnEmotion, btnSetting, btn4, btn5, this);
+        SetNav();
 
         /**/
+        nav_header_view = navigationView.getHeaderView(0);
+        nav_header_txt = (TextView)nav_header_view.findViewById(R.id.mytext);
+
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(CMyText.EXTRA_MESSAGE);
+        myText.setText(message);
+        nav_header_txt.setText(message);
+    }
+
+    private void SetNav()
+    {
+        /**/
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
 
@@ -57,69 +75,36 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
 
-        nav_header_view = navigationView.getHeaderView(0);
-        nav_header_text = (TextView)nav_header_view.findViewById(R.id.mytext);
-        nav_header_btn = (Button)nav_header_view.findViewById(R.id.changetext);
-
-        /**/
-        nav_header_btn.setOnClickListener(new View.OnClickListener()
+    public void onClickButton(View v)
+    {
+        switch(v.getId())
         {
-            @Override
-            public void onClick(View v)
-            {
-
-                nav_header_text.setText("123");
-            }
-        });
-
-        btnStory.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
-                startActivity(intent);
-            }
-        });
-
-        btnEmotion.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                Intent intent = new Intent(getApplicationContext(), CEmotion_List.class);
-                startActivity(intent);
-            }
-        });
-
-        btnSetting.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                Intent intent = new Intent(getApplicationContext(), CSetting_List.class);
-                startActivity(intent);
-            }
-        });
-        btn4.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-
-            }
-        });
-        btn5.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-
-            }
-        });
+            case R.id.changetext:
+                Intent intent1 = new Intent(getApplicationContext(), CMyText.class);
+                startActivity(intent1);
+                finish();
+                break;
+            case R.id.storybook:
+                Intent intent2 = new Intent(getApplicationContext(), CStoryListClient.class);
+                startActivity(intent2);
+                break;
+            case R.id.emotion:
+                Intent intent3 = new Intent(getApplicationContext(), CEmotion_List.class);
+                startActivity(intent3);
+                break;
+            case R.id.setting:
+                Intent intent4 = new Intent(getApplicationContext(), CSetting_List.class);
+                startActivity(intent4);
+                break;
+            case R.id.btn4:
+                break;
+            case R.id.btn5:
+                break;
+        }
     }
 
     @Override
@@ -150,7 +135,6 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
         }
         else if (id == R.id.nav_storybook)
         {
-            // Handle the camera action
             Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
             startActivity(intent);
         }
