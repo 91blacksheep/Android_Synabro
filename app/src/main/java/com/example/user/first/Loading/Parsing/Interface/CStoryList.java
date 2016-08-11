@@ -123,10 +123,8 @@ public class CStoryList extends BaseAdapter
         TextView titleTextView = (TextView) convertView.findViewById(R.id.titleText) ;
         TextView descTextView = (TextView) convertView.findViewById(R.id.exText) ;
 
-        /* TODO */
         titleTextView.setSelected(true);    //글이 길면 흐르는 효과
         descTextView.setSelected(true);     //글이 길면 흐르는 효과
-
 
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
         CStoryData listViewItem = list.get(position);
@@ -176,6 +174,4 @@ public class CStoryList extends BaseAdapter
     {
         list.add(item);
     }
-    /* TODO */
-
 }

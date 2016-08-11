@@ -1,7 +1,9 @@
 package com.example.user.first.Home;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,7 +13,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.user.first.Lib.CFileHelper;
 import com.example.user.first.UiSetting.CMyText;
 import com.example.user.first.Emotion.CEmotion_List;
 import com.example.user.first.R;
@@ -19,6 +23,12 @@ import com.example.user.first.Setting.CSetting_List;
 import com.example.user.first.Story.Story.PlayerView.CStory_Player;
 import com.example.user.first.Story.StoryList.View.CStoryListClient;
 import com.example.user.first.UiSetting.CTextPosition;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 public class CHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
@@ -31,6 +41,11 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
     NavigationView navigationView;
 
     CTextPosition cTextPosition = null;
+
+    String fileName = "myText.txt";
+    File dir = Environment.getExternalStorageDirectory();
+    String filePath = dir.getAbsolutePath() + "/" + fileName;
+    String encType = "utf-8";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -57,8 +72,16 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(CMyText.EXTRA_MESSAGE);
-        myText.setText(message);
         nav_header_txt.setText(message);
+        myText.setText(message);
+
+        boolean result = CFileHelper.getInstance().WriteString(fileName, message, encType);
+        String msg = "저장성공";
+        if(!result)
+        {
+            msg = "저장실패";
+        }
+        Toast.makeText(CHome.this, msg, Toast.LENGTH_SHORT).show();
     }
 
     private void SetNav()
