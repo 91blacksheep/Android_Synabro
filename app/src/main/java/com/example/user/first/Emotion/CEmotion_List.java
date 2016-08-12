@@ -17,6 +17,7 @@ import com.example.user.first.R;
 import com.example.user.first.Setting.CSetting_List;
 import com.example.user.first.Story.Story.PlayerView.CStory_Player;
 import com.example.user.first.Story.StoryList.View.CStoryListClient;
+import com.example.user.first.UiSetting.CMyText;
 import com.example.user.first.UiSetting.CTextPosition;
 
 /**
@@ -26,7 +27,12 @@ public class CEmotion_List extends AppCompatActivity implements NavigationView.O
 {
 
     TextView BtnHappy, BtnSad, BtnPanic, BtnAnger, BtnDisGust;
+
+    String message;
+
     Toolbar toolbar;
+    View nav_header_view;
+    TextView nav_header_txt;
     NavigationView navigationView;
 
     CTextPosition cTextPosition = null;
@@ -44,10 +50,20 @@ public class CEmotion_List extends AppCompatActivity implements NavigationView.O
 
         /**/
         cTextPosition = new CTextPosition(BtnHappy, BtnSad, BtnPanic, BtnAnger, BtnDisGust, this);
+
+        /* 네비게이션 드로어 초기화 */
         SetNav();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        nav_header_view = navigationView.getHeaderView(0);
+        nav_header_txt = (TextView)nav_header_view.findViewById(R.id.mytext);
+
+        /* 나만의 글귀 */
+        Intent intent = getIntent();
+        message = intent.getStringExtra(CMyText.EXTRA_MESSAGE);
+        nav_header_txt.setText(message);
     }
 
     private void SetNav()
@@ -63,9 +79,6 @@ public class CEmotion_List extends AppCompatActivity implements NavigationView.O
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
     }
 
     public void onClickButton(View v)

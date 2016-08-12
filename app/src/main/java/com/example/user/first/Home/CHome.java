@@ -1,9 +1,7 @@
 package com.example.user.first.Home;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,9 +11,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.user.first.Lib.CFileHelper;
+import com.example.user.first.Lib.CTextFileManager;
+import com.example.user.first.Loading.Client.CLoading;
 import com.example.user.first.UiSetting.CMyText;
 import com.example.user.first.Emotion.CEmotion_List;
 import com.example.user.first.R;
@@ -24,14 +22,9 @@ import com.example.user.first.Story.Story.PlayerView.CStory_Player;
 import com.example.user.first.Story.StoryList.View.CStoryListClient;
 import com.example.user.first.UiSetting.CTextPosition;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-
 public class CHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
+    /* var */
     TextView btnStory, btnEmotion, btnSetting, btn4, btn5;
     TextView myText;
 
@@ -40,13 +33,12 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
     TextView nav_header_txt;
     NavigationView navigationView;
 
+    String message;
+
     CTextPosition cTextPosition = null;
+    CTextFileManager cTextFileManager = null;
 
-    String fileName = "myText.txt";
-    File dir = Environment.getExternalStorageDirectory();
-    String filePath = dir.getAbsolutePath() + "/" + fileName;
-    String encType = "utf-8";
-
+    /* method */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -59,29 +51,24 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
         btnSetting = (TextView)findViewById(R.id.setting);
         btn4 = (TextView)findViewById(R.id.btn4);
         btn5 = (TextView)findViewById(R.id.btn5);
-
         myText = (TextView)findViewById(R.id.mytext);
 
-        /**/
+        /* 메뉴 위치 세팅 */
         cTextPosition = new CTextPosition(btnStory, btnEmotion, btnSetting, btn4, btn5, this);
-        SetNav();
 
-        /**/
+        /* 네비게이션 드로어 초기화 */
+        SetNav();
         nav_header_view = navigationView.getHeaderView(0);
         nav_header_txt = (TextView)nav_header_view.findViewById(R.id.mytext);
 
+        /* 나만의 글귀 */
         Intent intent = getIntent();
-        String message = intent.getStringExtra(CMyText.EXTRA_MESSAGE);
+        message = intent.getStringExtra(CMyText.EXTRA_MESSAGE);
         nav_header_txt.setText(message);
         myText.setText(message);
 
-        boolean result = CFileHelper.getInstance().WriteString(fileName, message, encType);
-        String msg = "저장성공";
-        if(!result)
-        {
-            msg = "저장실패";
-        }
-        Toast.makeText(CHome.this, msg, Toast.LENGTH_SHORT).show();
+        cTextFileManager = new CTextFileManager(this);
+        cTextFileManager.save(message);
     }
 
     private void SetNav()
@@ -113,14 +100,17 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
                 break;
             case R.id.storybook:
                 Intent intent2 = new Intent(getApplicationContext(), CStoryListClient.class);
+                intent2.putExtra(CLoading.EXTRA_MESSAGE, message);
                 startActivity(intent2);
                 break;
             case R.id.emotion:
                 Intent intent3 = new Intent(getApplicationContext(), CEmotion_List.class);
+                intent3.putExtra(CLoading.EXTRA_MESSAGE, message);
                 startActivity(intent3);
                 break;
             case R.id.setting:
                 Intent intent4 = new Intent(getApplicationContext(), CSetting_List.class);
+                intent4.putExtra(CLoading.EXTRA_MESSAGE, message);
                 startActivity(intent4);
                 break;
             case R.id.btn4:

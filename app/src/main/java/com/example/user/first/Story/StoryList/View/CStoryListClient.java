@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.example.user.first.Emotion.CEmotion_List;
 import com.example.user.first.Home.CHome;
@@ -22,6 +23,7 @@ import com.example.user.first.Loading.Parsing.Lib.CStoryData;
 import com.example.user.first.R;
 import com.example.user.first.Setting.CSetting_List;
 import com.example.user.first.Story.Story.PlayerView.CStory_Player;
+import com.example.user.first.UiSetting.CMyText;
 
 /**
  * Created by KICT-15 on 2016-07-06.
@@ -31,7 +33,11 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
     /* value */
     ScrollView scrollView;
     Toolbar toolbar;
+    View nav_header_view;
+    TextView nav_header_txt;
     NavigationView navigationView;
+
+    String message;
 
     public ListView listView;
     public CStoryList cStoryList = null;
@@ -48,13 +54,21 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         scrollView = (ScrollView)findViewById(R.id.scrView);
         listView = (ListView)findViewById(R.id.listView);
 
-        /**/
+        /* 네비게이션 드로어 초기화 */
         SetNav();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        /**/
+        nav_header_view = navigationView.getHeaderView(0);
+        nav_header_txt = (TextView)nav_header_view.findViewById(R.id.mytext);
+
+        /* 나만의 글귀 */
+        Intent intent = getIntent();
+        message = intent.getStringExtra(CMyText.EXTRA_MESSAGE);
+        nav_header_txt.setText(message);
+
+        /* 리스트 아이템 Init*/
         listView.setAdapter(cStoryList);
         listView.setOnItemClickListener(mItemClickListener);
     }
