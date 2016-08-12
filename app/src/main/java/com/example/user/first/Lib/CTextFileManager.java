@@ -1,7 +1,6 @@
 package com.example.user.first.Lib;
 
 import android.content.Context;
-import android.widget.Toast;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -38,7 +37,7 @@ public class CTextFileManager
         }
         catch (IOException e)
         {
-            Toast.makeText(m_Context, "파일 읽기 실패", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(m_Context, "파일 저장 실패", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -57,8 +56,7 @@ public class CTextFileManager
         }
         catch (IOException e)
         {
-            Toast.makeText(m_Context, "파일 저장 실패", Toast.LENGTH_SHORT).show();
-            return "";
+            return "나만의 글귀";
         }
     }
 
