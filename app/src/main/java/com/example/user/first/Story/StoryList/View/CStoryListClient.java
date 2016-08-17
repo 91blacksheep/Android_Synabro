@@ -120,10 +120,12 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         {
             CStoryData item = (CStoryData)parent.getItemAtPosition(position);
 
-            String url = item.Get_m_url();
+            String url = item.Get_url();
+            String type = item.Get_type();
 
             Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
-            intent.putExtra("m_url", url);
+            intent.putExtra("url", url);
+            intent.putExtra("type", type);
             startActivityForResult(intent, 0);
         }
     };

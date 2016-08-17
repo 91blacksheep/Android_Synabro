@@ -7,12 +7,12 @@ public class CTalkGuideLine_Data
 {
     private String m_talkGuideLine;
 
-    public String Get_m_talkGuideLine()
+    public String Get_talkGuideLine()
     {
         return this.m_talkGuideLine;
     }
-    public void Set_m_talkGuideLine(String m_talkGuideLine)
+    public void Set_talkGuideLine(String talkGuideLine)
     {
-        this.m_talkGuideLine = m_talkGuideLine;
+        this.m_talkGuideLine = talkGuideLine;
     }
 }
