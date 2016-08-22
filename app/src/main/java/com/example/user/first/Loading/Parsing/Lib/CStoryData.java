@@ -3,8 +3,10 @@ package com.example.user.first.Loading.Parsing.Lib;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.StrictMode;
+import android.util.Log;
 
-import java.io.IOException;
+import com.example.user.first.Lib.CWebInterface;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -23,12 +25,7 @@ public class CStoryData
     private String m_type;
     Bitmap bmp;
 
-    public CStoryData()
-    {
-
-    }
-
-
+    public CStoryData() {}
 
     public CStoryData(String thumbnail, String title, String ex, String url, String group, String type)
     {
@@ -43,14 +40,29 @@ public class CStoryData
         {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
             URL url2 = new URL(img_url + thumbnail);
-            bmp = BitmapFactory.decodeStream(url2.openConnection().getInputStream());
+
+            CWebInterface.CData cData =  CWebInterface.GetInstance().Find("Img1");
+
+            if(cData == null)
+            {
+                Log.i("CWebInterface","cInputStream");
+            }
+
+            if(cData.eState == CWebInterface.EState.error)
+            {
+                Log.i("error",cData.strErr);
+                return;
+            }
+
+            bmp = BitmapFactory.decodeByteArray(cData.byteData, 0, cData.byteData.length);
+            //bmp = cData.bmp;
+            //bmp = BitmapFactory.decodeByteArray(cData.byteData,0,cData.byteData.length);
+            //bmp = BitmapFactory.decodeStream(cData.url.openConnection().getInputStream());
+
+            //bmp = BitmapFactory.decodeStream(url2.openConnection().getInputStream());
 
         }
-        catch (MalformedURLException e)
-        {
-
-        }
-        catch (IOException e)
+        catch (MalformedURLException ignored)
         {
 
         }

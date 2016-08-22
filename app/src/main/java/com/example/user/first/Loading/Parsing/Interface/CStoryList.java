@@ -98,7 +98,6 @@ public class CStoryList extends BaseAdapter
         list.add(new CStoryData("LEnsRQLB4DU", "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"i1jSCpo1Vq0", "내적", "미워하는마음"));
         list.add(new CStoryData("LEnsRQLB4DU", "어두운 밤", "▶ 두려움", url+"i1jSCpo1Vq0", "내적", "두려움"));
         list.add(new CStoryData("LEnsRQLB4DU", "콩닥, 철썩 파도", "▶ 심장은 왜 뛰는 걸까?", url+"i1jSCpo1Vq0", "내적", "정서의형성"));
-
     }
 
     @Override
