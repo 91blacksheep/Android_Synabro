@@ -35,7 +35,7 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
 
     String message;
 
-    CTextPosition cTextPosition = null;
+    //CTextPosition cTextPosition = null;
     CTextFileManager cTextFileManager = null;
 
     /* method */
@@ -49,12 +49,12 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
         btnStory = (TextView)findViewById(R.id.storybook);
         btnEmotion = (TextView)findViewById(R.id.emotion);
         btnSetting = (TextView)findViewById(R.id.setting);
-        btn4 = (TextView)findViewById(R.id.btn4);
-        btn5 = (TextView)findViewById(R.id.btn5);
+        //btn4 = (TextView)findViewById(R.id.btn4);
+        //btn5 = (TextView)findViewById(R.id.btn5);
         myText = (TextView)findViewById(R.id.mytext);
 
         /* 메뉴 위치 세팅 */
-        cTextPosition = new CTextPosition(btnStory, btnEmotion, btnSetting, btn4, btn5, this);
+        //cTextPosition = new CTextPosition(btnStory, btnEmotion, btnSetting, btn4, btn5, this);
 
         /* 네비게이션 드로어 초기화 */
         SetNav();
@@ -113,10 +113,10 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
                 intent4.putExtra(CLoading.EXTRA_MESSAGE, message);
                 startActivity(intent4);
                 break;
-            case R.id.btn4:
+            /*case R.id.btn4:
                 break;
             case R.id.btn5:
-                break;
+                break;*/
         }
     }
 

@@ -70,14 +70,16 @@
                         android:layout_height="wrap_content"
                         android:text="이전"
                         android:id="@+id/btn_pre"
-                        android:layout_gravity="left|bottom" />
+                        android:layout_gravity="left|bottom"
+                        android:onClick="onClickButton" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="다음"
                         android:id="@+id/btn_next"
-                        android:layout_gravity="right|bottom" />
+                        android:layout_gravity="right|bottom"
+                        android:onClick="onClickButton" />
                 </FrameLayout>
             </LinearLayout>
         </LinearLayout>

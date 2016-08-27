@@ -55,12 +55,6 @@ public class CStoryData
             }
 
             bmp = BitmapFactory.decodeByteArray(cData.byteData, 0, cData.byteData.length);
-            //bmp = cData.bmp;
-            //bmp = BitmapFactory.decodeByteArray(cData.byteData,0,cData.byteData.length);
-            //bmp = BitmapFactory.decodeStream(cData.url.openConnection().getInputStream());
-
-            //bmp = BitmapFactory.decodeStream(url2.openConnection().getInputStream());
-
         }
         catch (MalformedURLException ignored)
         {

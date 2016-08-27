@@ -48,52 +48,49 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp" />
 
-            <RelativeLayout
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/flower"
-                android:gravity="center" >
+                android:layout_margin="10dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="동화책"
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
                     android:id="@+id/storybook"
+                    android:background="@drawable/story_black"
+                    android:layout_gravity="center_horizontal"
                     android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                    android:layout_margin="10dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="정서"
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
                     android:id="@+id/emotion"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/emotion_black"
                     android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                    android:layout_margin="10dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="혐오"
-                    android:id="@+id/btn5"
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/button3"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/memo_black"
                     android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                    android:layout_margin="10dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="설정"
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
                     android:id="@+id/setting"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/setting_black"
                     android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                    android:layout_margin="10dp" />
+            </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="공포"
-                    android:id="@+id/btn4"
-                    android:onClick="onClickButton"
-                    android:textSize="30dp" />
-            </RelativeLayout>
         </LinearLayout>
 
     </android.support.v4.widget.DrawerLayout>

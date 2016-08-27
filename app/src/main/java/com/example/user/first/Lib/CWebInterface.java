@@ -106,14 +106,12 @@ public class CWebInterface extends Thread
         {
             cData = m_ResList.get(i);
 
-            if(cData.strID.equals(strID) == true)
+            if(cData.strID.equals(strID))
             {
                 Log.i("CWebInterface", "Find " + cData.strID);
                 return cData;
             }
         }
-
-        //Log.i("CWebInterface","Find NULL!!");
         return null;
     }
     public void Remove(String strID)
@@ -125,7 +123,7 @@ public class CWebInterface extends Thread
         {
             cData = m_ResList.get(i);
 
-            if(cData.strID.equals(strID) == true)
+            if(cData.strID.equals(strID))
             {
                 m_ResList.remove(i);
             }
